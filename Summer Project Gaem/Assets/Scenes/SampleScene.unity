@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mcrigidbody: {fileID: 1049157400}
   Gravity: 9.8
+  movespeed: 0
 --- !u!50 &1049157400
 Rigidbody2D:
   serializedVersion: 4
