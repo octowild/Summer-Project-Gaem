@@ -17,9 +17,13 @@ public class MC_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.d))
+        if (Input.GetKey("d"))
         {
-            mcrigidbody.velocity = Vector2D.right * movespeed;
+            mcrigidbody.velocity = Vector2.right * movespeed;
+        }
+        if (Input.GetKey("a"))
+        {
+            mcrigidbody.velocity = Vector2.left * movespeed;
         }
     }
 }
