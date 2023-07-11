@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MC_Script : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D mcrigidbody;
     public float Gravity;
 
 
