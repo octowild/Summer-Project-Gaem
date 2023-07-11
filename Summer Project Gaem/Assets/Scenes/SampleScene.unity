@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 1049157398}
   - component: {fileID: 1049157399}
   - component: {fileID: 1049157400}
+  - component: {fileID: 1049157401}
   m_Layer: 0
   m_Name: MC
   m_TagString: Untagged
@@ -507,6 +508,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &1049157401
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049157396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1001 &4367205903810573587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,4 +613,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1049157400}
+    - targetCorrespondingSourceObject: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049157401}
   m_SourcePrefab: {fileID: 100100000, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
