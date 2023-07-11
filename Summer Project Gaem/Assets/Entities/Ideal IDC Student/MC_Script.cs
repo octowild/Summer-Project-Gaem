@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MC_Script : MonoBehaviour
 {
-    public RigidBody rigidbody;
+    public Rigidbody2D rigidbody;
     public float Gravity;
 
-    public Transform Transform { get => transform; set => transform = value; }
 
     // Start is called before the first frame update
     void Start()
