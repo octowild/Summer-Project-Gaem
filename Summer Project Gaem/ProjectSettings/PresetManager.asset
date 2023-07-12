@@ -11,5 +11,5 @@ PresetManager:
       m_ManagedTypeFallback: 
     second:
     - m_Preset: {fileID: 2655988077585873504, guid: 09bfd033eae8f27449751d3489deebd2, type: 2}
-      m_Filter: import preset
+      m_Filter: 
       m_Disabled: 0
