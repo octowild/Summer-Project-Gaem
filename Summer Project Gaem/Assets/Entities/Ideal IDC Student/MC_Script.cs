@@ -5,7 +5,7 @@ using UnityEngine;
 public class MC_Script : MonoBehaviour
 {
     public Rigidbody2D mcrigidbody;
-    public float Gravity;
+   
     public float movespeed;
 
     // Start is called before the first frame update
