@@ -5,13 +5,13 @@ using UnityEngine;
 public class camfollowmc : MonoBehaviour
 {
     public Transform player;
-    // Start is called before the first frame update
+    public float offset;
+ 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
        
@@ -19,6 +19,7 @@ public class camfollowmc : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.position.x = player.position.x
+        offset = transform.position.x - player.position.x;
+        transform.position.x = player.position.x + offset;
     }
 }
