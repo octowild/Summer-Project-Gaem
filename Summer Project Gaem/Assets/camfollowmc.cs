@@ -5,7 +5,8 @@ using UnityEngine;
 public class camfollowmc : MonoBehaviour
 {
     public Transform player;
-    public float offset;
+    public Vector3 offset=new Vector3(0,0,-10);
+    public bool istrig = false;
  
     void Start()
     {
@@ -14,12 +15,22 @@ public class camfollowmc : MonoBehaviour
 
     void Update()
     {
-       
+        if (istrig)
+        {
+            gameObject.transform.position = player.position + offset;
+        }
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        offset = gameObject.transform.position.x - player.position.x;
-        gameObject.transform.position.x = player.position.x + offset;
+        istrig = true;
+        offset = gameObject.transform.position - player.position;
+        offset = new Vector3(offset.x, 0, -10);
+        
+    }
+    private void OnTriggerExit2D(Collider2D Collision)
+    {
+        istrig = false;
     }
 }
