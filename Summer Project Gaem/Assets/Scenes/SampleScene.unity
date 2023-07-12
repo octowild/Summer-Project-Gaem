@@ -368,6 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef9ab02272589240894ed398e582efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1049157397}
+  offset: 0
 --- !u!66 &519420036
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -864,7 +866,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -909,10 +911,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 8
     m_Data: {fileID: 2024994568, guid: d18c51949094a9b45b34adafe9a0114a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 520060220, guid: d18c51949094a9b45b34adafe9a0114a, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 520060220, guid: d18c51949094a9b45b34adafe9a0114a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1874044154, guid: d18c51949094a9b45b34adafe9a0114a, type: 3}
   - m_RefCount: 1
