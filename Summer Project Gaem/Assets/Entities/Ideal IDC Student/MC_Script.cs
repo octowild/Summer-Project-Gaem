@@ -7,6 +7,7 @@ public class MC_Script : MonoBehaviour
     public Rigidbody2D mcrigidbody;
     public float movespeed;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class MC_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Horizontal"))
+        if (Input.GetAxisRaw("Horizontal")!=0)
         {
             transform.position += Input.GetAxisRaw("Horizontal") * Vector3.right * movespeed * Time.deltaTime;
         }
