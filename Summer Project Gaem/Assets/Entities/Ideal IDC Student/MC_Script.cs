@@ -16,13 +16,11 @@ public class MC_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("d"))
+        if (Input.GetAxisRaw("Horizontal"))
         {
-            mcrigidbody.velocity = Vector2.right * movespeed;
+            transform.position += Input.GetAxisRaw("Horizontal") * Vector3.right * movespeed * Time.deltaTime;
         }
-        if (Input.GetKey("a"))
-        {
-            mcrigidbody.velocity = Vector2.left * movespeed;
-        }
+ 
+       
     }
 }

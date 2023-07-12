@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mcrigidbody: {fileID: 1049157400}
-  movespeed: 0
+  movespeed: 5
 --- !u!50 &1049157400
 Rigidbody2D:
   serializedVersion: 4
@@ -1415,7 +1415,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1454,14 +1454,14 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a6aad61b28e9e134ab1193251fe3f934, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -1663553204, guid: e98433e783f2e0b49a664f10b0ddc4ca, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -473752687, guid: e98433e783f2e0b49a664f10b0ddc4ca, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 593208236, guid: e98433e783f2e0b49a664f10b0ddc4ca, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1663553204, guid: e98433e783f2e0b49a664f10b0ddc4ca, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 423006648, guid: e98433e783f2e0b49a664f10b0ddc4ca, type: 3}
   m_TileMatrixArray:
