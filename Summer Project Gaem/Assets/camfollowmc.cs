@@ -19,7 +19,7 @@ public class camfollowmc : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        offset = transform.position.x - player.position.x;
-        transform.position.x = player.position.x + offset;
+        offset = gameObject.transform.position.x - player.position.x;
+        gameObject.transform.position.x = player.position.x + offset;
     }
 }
