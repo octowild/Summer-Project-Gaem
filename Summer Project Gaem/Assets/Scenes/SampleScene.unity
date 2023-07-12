@@ -858,15 +858,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8e4cc83f536890c429a6fbcb0c38fa36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5625, y: 1.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1049157399
@@ -944,7 +944,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.46, y: 1.63}
   m_Direction: 0
 --- !u!1 &1072740836
 GameObject:
@@ -1164,6 +1164,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2445643131529414836, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
       propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445643131529414836, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445643131529414836, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
+      propertyPath: m_Size.y
+      value: 1.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445643131529414836, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
