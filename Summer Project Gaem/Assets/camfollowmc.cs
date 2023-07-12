@@ -4,36 +4,32 @@ using UnityEngine;
 
 public class camfollowmc : MonoBehaviour
 {
-    public Rigidbody2D player;
-    public Rigidbody2D rb;
-    public Vector3 offset=new Vector3(0,0,-10);
-    public bool istrig = false;
-    public float speed;
- 
+    public GameObject player;
+    public Vector2 offset;
+    public float speedfactor;
+    //private Vector2 threshold;
+
     void Start()
     {
-        
+        Debug.Log(Camera.main.orthographicSize);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (istrig)
+        Debug.Log(player.transform.position);
+        Debug.Log(transform.position);
+
+        if (Mathf.Abs(player.transform.position.x - transform.position.x) >= offset.x || Mathf.Abs(player.transform.position.y - transform.position.y) >= offset.y)
         {
-            rb.velocity = player.velocity;
-            //gameObject.transform.position = player.position + offset;
+            Debug.Log("triggered");
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), speedfactor * Time.deltaTime);
         }
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnDrawGizmos()
     {
-        istrig = true;
-       // offset = gameObject.transform.position - player.position;
-       // offset = new Vector3(offset.x, 0, -10);
-        
-    }
-    private void OnTriggerExit2D(Collider2D Collision)
-    {
-        istrig = false;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, offset);
     }
 }
