@@ -5,24 +5,23 @@ using UnityEngine;
 public class camfollowmc : MonoBehaviour
 {
     public GameObject player;
+    public MC_Script mcs;
     public Vector2 offset;
     public float speedfactor;
-    //private Vector2 threshold;
+
 
     void Start()
     {
-        Debug.Log(Camera.main.orthographicSize);
+        
     }
 
     void Update()
     {
-        Debug.Log(player.transform.position);
-        Debug.Log(transform.position);
 
+        float camspeed = mcs.movespeed > speedfactor ? mcs.movespeed : speedfactor;
         if (Mathf.Abs(player.transform.position.x - transform.position.x) >= offset.x || Mathf.Abs(player.transform.position.y - transform.position.y) >= offset.y)
-        {
-            Debug.Log("triggered");
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), speedfactor * Time.deltaTime);
+        {         
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), camspeed * Time.deltaTime);
         }
 
     }
