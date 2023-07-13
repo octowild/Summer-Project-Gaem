@@ -2191,6 +2191,7 @@ GameObject:
   - component: {fileID: 1528858424}
   - component: {fileID: 1528858423}
   - component: {fileID: 1528858426}
+  - component: {fileID: 1528858427}
   m_Layer: 0
   m_Name: Birb
   m_TagString: Untagged
@@ -2282,9 +2283,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07, y: 0.01}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.46
 --- !u!4 &1528858425
 Transform:
   m_ObjectHideFlags: 0
@@ -2321,6 +2322,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1528858427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528858422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35fe991cb9fbfd46836f13f0b7bf892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1528858426}
 --- !u!1 &1652563088
 GameObject:
   m_ObjectHideFlags: 0
