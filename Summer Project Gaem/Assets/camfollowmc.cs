@@ -14,7 +14,7 @@ public class camfollowmc : MonoBehaviour
         Debug.Log(Camera.main.orthographicSize);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Debug.Log(player.transform.position);
         Debug.Log(transform.position);

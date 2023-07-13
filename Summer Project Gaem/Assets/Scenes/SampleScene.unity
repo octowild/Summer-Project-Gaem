@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1049157396}
-  offset: {x: 2, y: 2}
+  offset: {x: 2.5, y: 5}
   speedfactor: 5
 --- !u!1 &688149260
 GameObject:
