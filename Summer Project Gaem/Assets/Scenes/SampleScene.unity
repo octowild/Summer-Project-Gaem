@@ -1410,6 +1410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049157397}
   - component: {fileID: 1049157398}
+  - component: {fileID: 1049157404}
   - component: {fileID: 1049157399}
   - component: {fileID: 1049157400}
   - component: {fileID: 1049157401}
@@ -1498,7 +1499,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049157396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86f258b64bf339949a872d383e0ae57e, type: 3}
   m_Name: 
@@ -1616,6 +1617,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1049157404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049157396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d49b9f29ffbec47b756e20f573c128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  jumpHeight: 5
+  mxtime: 1
+  trshldOne: 0.7
+  trshldTwo: 0.3
+  rb: {fileID: 1049157400}
+  groundCheck: {fileID: 1210377886}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  gravityScale: 5
+  fallGravityScale: 15
 --- !u!1 &1072740836
 GameObject:
   m_ObjectHideFlags: 0
