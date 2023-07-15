@@ -22,21 +22,17 @@ public class MC_Script : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
 
+        sideinput = Input.GetAxisRaw("Horizontal");
+        mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+
+
+    }
     void Update()
     {
-        sideinput = Input.GetAxisRaw("Horizontal");
         
-
-
-        
-        
-        mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
-        
-        
-
-
-
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             isjumping = true;
