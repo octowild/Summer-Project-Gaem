@@ -36,11 +36,6 @@ public class movement : MonoBehaviour
         {
             rb.gravityScale = fallGravityScale;
         }
- 
-    }
-
-    private void FixedUpdate() 
-    {
         if (IsGrounded())
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -50,11 +45,17 @@ public class movement : MonoBehaviour
 
             if (Mathf.Abs(rb.velocity.x) < speed)
             {
-                
+
                 rb.AddForce(Vector2.right * horizontal * speed * 1 / 5, ForceMode2D.Impulse);
             }
-            
+
+
         }
+
+        
+    
+        
+        
         
     }
 

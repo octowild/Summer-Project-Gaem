@@ -1499,13 +1499,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049157396}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86f258b64bf339949a872d383e0ae57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mcrigidbody: {fileID: 1049157400}
-  movespeed: 5
+  movespeed: 7
+  jumpstr: 10
+  jumptime: 0.3
+  mcrb: {fileID: 1049157400}
+  groundCheck: {fileID: 1210377886}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &1049157400
 Rigidbody2D:
   serializedVersion: 4
@@ -1521,7 +1527,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1575,7 +1581,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049157396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fbd816b4e66016428f6bc1bc26549c1, type: 3}
   m_Name: 
@@ -1624,16 +1630,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049157396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8d49b9f29ffbec47b756e20f573c128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
   jumpHeight: 5
-  mxtime: 1
-  trshldOne: 0.7
-  trshldTwo: 0.3
   rb: {fileID: 1049157400}
   groundCheck: {fileID: 1210377886}
   groundLayer:
