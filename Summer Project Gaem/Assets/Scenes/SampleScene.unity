@@ -1414,9 +1414,8 @@ GameObject:
   - component: {fileID: 1049157399}
   - component: {fileID: 1049157400}
   - component: {fileID: 1049157401}
-  - component: {fileID: 1049157402}
   - component: {fileID: 1049157403}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,34 +1573,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.46, y: 1.63}
   m_Direction: 0
---- !u!114 &1049157402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049157396}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fbd816b4e66016428f6bc1bc26549c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  m_GroundCheck: {fileID: 1210377886}
-  m_CeilingCheck: {fileID: 1652563089}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &1049157403
 Animator:
   serializedVersion: 5
@@ -2490,7 +2461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
