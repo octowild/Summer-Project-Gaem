@@ -25,9 +25,7 @@ public class MC_Script : MonoBehaviour
     private void FixedUpdate()
     {
 
-        sideinput = Input.GetAxisRaw("Horizontal");
-        mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
-
+       
 
     }
     void Update()
@@ -55,10 +53,13 @@ public class MC_Script : MonoBehaviour
         {
             isjumping = false;
         }
+        sideinput = Input.GetAxisRaw("Horizontal");
+        mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+
     }
-            
-        
-   
+
+
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);

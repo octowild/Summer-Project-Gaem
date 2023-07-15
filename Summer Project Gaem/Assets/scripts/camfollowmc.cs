@@ -14,16 +14,19 @@ public class camfollowmc : MonoBehaviour
     {
         
     }
-
-    void Update()
+    private void FixedUpdate()
     {
-
         float camspeed = mcs.movespeed > speedfactor ? mcs.movespeed : speedfactor;
         if (Mathf.Abs(player.transform.position.x - transform.position.x) >= offset.x || Mathf.Abs(player.transform.position.y - transform.position.y) >= offset.y)
-        {         
+        {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), camspeed * Time.deltaTime);
         }
 
+    }
+    void Update()
+    {
+
+        
     }
 
     private void OnDrawGizmos()
