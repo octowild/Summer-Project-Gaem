@@ -8,6 +8,7 @@ public class movement : MonoBehaviour
     public float speed = 8f;
     [SerializeField] private float jumpHeight = 5f;
     private bool isFacingRight = true;
+    private bool jump = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -24,28 +25,46 @@ public class movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (IsGrounded())
-        {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        }
-        if (!IsGrounded())
-        {
-            rb.velocity += Vector2.horizontal("Right") * speed ;
-        }
+        
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.gravityScale = gravityScale;
-            float jumpforce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
-            rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-
+            jump = true;
         }
-
+        
         if (Input.GetButtonUp("Jump"))
         {
-            rb.gravityScale = fallGravityScale;
+            jump = false;
         }
 
+        Flip();
+
+    }
+    private void FixedUpdate()
+    {
+        if (IsGrounded())
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            if (jump)
+            {
+                rb.gravityScale = gravityScale;
+                float jumpforce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
+                rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+            }
+        }
+
+        else  if (!IsGrounded())
+        {
+            if (rb.velocity.x * horizontal < speed * horizontal)
+            {
+                rb.velocity += Vector2.right * speed * 1/3;
+            }
+            if (!jump)
+            {
+                rb.gravityScale = fallGravityScale;
+            }
+            
+        }
     }
 
     private bool IsGrounded()
