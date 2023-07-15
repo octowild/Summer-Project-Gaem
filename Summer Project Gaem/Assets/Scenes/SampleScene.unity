@@ -276,8 +276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1049157396}
   mcs: {fileID: 1049157399}
-  offset: {x: 2.5, y: 5}
-  speedfactor: 2
+  mcrb: {fileID: 1049157400}
+  speedfactor: 0
+  offset: {x: 2.09, y: 9.15}
+  camspeed: 1.9
 --- !u!1 &688149260
 GameObject:
   m_ObjectHideFlags: 0
