@@ -24,11 +24,20 @@ public class movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        if (IsGrounded())
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        if (!IsGrounded())
+        {
+            rb.velocity += Vector2.horizontal("Right") * speed ;
+        }
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.gravityScale = gravityScale;
             float jumpforce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
-            rb.AddForce(Vector2.up * jumpforce , ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
 
         }
 
@@ -36,26 +45,7 @@ public class movement : MonoBehaviour
         {
             rb.gravityScale = fallGravityScale;
         }
- 
-    }
 
-    private void FixedUpdate() 
-    {
-        if (IsGrounded())
-        {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        }
-        if (!IsGrounded())
-        {
-
-            if (Mathf.Abs(rb.velocity.x) < speed)
-            {
-                
-                rb.AddForce(Vector2.right * horizontal * speed * 1 / 5, ForceMode2D.Impulse);
-            }
-            
-        }
-        
     }
 
     private bool IsGrounded()
