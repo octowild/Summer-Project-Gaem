@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972262347251846975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.107, y: -0.257, z: -0.0012889914}
+  m_LocalPosition: {x: 0.107, y: -0.103, z: -0.0012889914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 4376267957461491459}
   - component: {fileID: 1487541549077527506}
   - component: {fileID: 2975246768164609923}
-  - component: {fileID: 1264437281716352782}
   - component: {fileID: 2581881738800486504}
   - component: {fileID: 6347793876609114875}
   m_Layer: 0
@@ -155,41 +154,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.11, y: 0}
   m_Size: {x: 0.23, y: 0.6}
   m_Direction: 0
---- !u!58 &1264437281716352782
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517032069580579509}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11, y: 0.15}
-  serializedVersion: 2
-  m_Radius: 0.24
 --- !u!95 &2581881738800486504
 Animator:
   serializedVersion: 5
@@ -224,8 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallspeed: 2.5
-  capcol: {fileID: 2975246768164609923}
-  circol: {fileID: 1264437281716352782}
   anim: {fileID: 2581881738800486504}
   groundCheck: {fileID: 7535050985362709941}
   groundLayer:

@@ -5,8 +5,6 @@ using UnityEngine;
 public class shitlogic : MonoBehaviour
 {
     public float fallspeed;
-    public CapsuleCollider2D capcol;
-    public CircleCollider2D circol;
     public Animator anim;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -24,7 +22,8 @@ public class shitlogic : MonoBehaviour
         if (IsGrounded())
         {
             speed = 0;
-            anim.SetBool.splash = true;
+            anim.SetBool("splash",true);
+
         }
         transform.position += Vector3.down * speed * Time.deltaTime;
     }
