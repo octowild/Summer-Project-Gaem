@@ -28,10 +28,7 @@ public class Logicmain : MonoBehaviour
         keyinteract = keyleaf.ininteractzone;
         vdoorinteract = vinedoor.ininteractzone;
 
-        if (mc.mcinteracts)
-        {
 
-        }
     }
 
 

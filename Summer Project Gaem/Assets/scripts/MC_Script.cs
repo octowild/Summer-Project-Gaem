@@ -11,11 +11,13 @@ public class MC_Script : MonoBehaviour
     public Rigidbody2D mcrb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public keyleaflogic key;
     public Logicmain logic;
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
-    public bool mcinteracts;
+    public int haskey;
+    public bool mcinteract;
 
 
 
@@ -27,7 +29,7 @@ public class MC_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+       
        
 
     }
@@ -59,9 +61,11 @@ public class MC_Script : MonoBehaviour
         sideinput = Input.GetAxisRaw("Horizontal");
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.E)&&logic.caninteract)
+        if (Input.GetKeyDown(KeyCode.E)&&key.ininteractzone)
         {
-            mcinteracts = true;
+            haskey += 1;
+            mcinteract = true;
+            Debug.Log(haskey);
         }
     }
 
