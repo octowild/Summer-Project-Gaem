@@ -72,6 +72,10 @@ public class MC_Script : MonoBehaviour
         {
             doorinteract = true;
         }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            doorinteract = false;
+        }
     }
 
 

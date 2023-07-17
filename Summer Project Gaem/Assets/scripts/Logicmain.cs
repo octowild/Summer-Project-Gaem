@@ -35,6 +35,7 @@ public class Logicmain : MonoBehaviour
         if(mc.doorinteract&& mc.haskey > 0)
         {
             dooropen = true;
+            mc.haskey -= 1;
         }
 
 

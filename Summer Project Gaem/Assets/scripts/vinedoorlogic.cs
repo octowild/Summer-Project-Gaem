@@ -8,7 +8,7 @@ public class vinedoorlogic : MonoBehaviour
     public CapsuleCollider2D capcol;
     public CircleCollider2D circol;
     public bool ininteractzone;
-    public string uitxt = "this is a door";
+    public Animator anim;
 
   
 
@@ -20,7 +20,10 @@ public class vinedoorlogic : MonoBehaviour
 
     void Update()
     {
-        
+        if(logic.dooropen)
+        {
+            anim.SetBool("isopen", true);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
