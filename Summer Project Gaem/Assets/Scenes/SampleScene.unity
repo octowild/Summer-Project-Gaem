@@ -1403,7 +1403,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1049157397}
   - component: {fileID: 1049157398}
-  - component: {fileID: 1049157404}
   - component: {fileID: 1049157399}
   - component: {fileID: 1049157400}
   - component: {fileID: 1049157401}
@@ -1497,6 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f258b64bf339949a872d383e0ae57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   movespeed: 7
   jumpstr: 10
   jumptime: 0.3
@@ -1505,6 +1505,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  logic: {fileID: 0}
 --- !u!50 &1049157400
 Rigidbody2D:
   serializedVersion: 4
@@ -1588,27 +1589,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1049157404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049157396}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8d49b9f29ffbec47b756e20f573c128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  jumpHeight: 5
-  rb: {fileID: 1049157400}
-  groundCheck: {fileID: 1210377886}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  gravityScale: 5
-  fallGravityScale: 15
 --- !u!1001 &1061897072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1702,6 +1682,7 @@ MonoBehaviour:
   mc: {fileID: 0}
   vinedoor: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
   keyleaf: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
+  shit: {fileID: 6347793876609114875, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
 --- !u!4 &1072740838
 Transform:
   m_ObjectHideFlags: 0

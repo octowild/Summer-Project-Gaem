@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MC_Script : MonoBehaviour
 {
+    public int hp;
     public float movespeed;
     public float jumpstr;
     public float jumptime;
