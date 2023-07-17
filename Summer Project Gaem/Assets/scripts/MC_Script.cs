@@ -15,6 +15,7 @@ public class MC_Script : MonoBehaviour
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
+    public bool mcinteracts;
 
 
 
@@ -58,6 +59,10 @@ public class MC_Script : MonoBehaviour
         sideinput = Input.GetAxisRaw("Horizontal");
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
+        if (Input.GetKeyDown(KeyCode.E)&&logic.caninteract)
+        {
+            mcinteracts = true;
+        }
     }
 
 

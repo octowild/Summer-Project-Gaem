@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Logicmain : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class Logicmain : MonoBehaviour
     public keyleaflogic keyleaf;
     public shitlogic shit;
 
+    public MyClass[] interactorder;
+
+    public bool caninteract=false;
+    public bool keyinteract=false;
+    public bool vdoorinteract = false;
 
 
     void Start()
@@ -19,7 +25,13 @@ public class Logicmain : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        keyinteract = keyleaf.ininteractzone;
+        vdoorinteract = vinedoor.ininteractzone;
+
+        if (mc.mcinteracts)
+        {
+
+        }
     }
 
 
