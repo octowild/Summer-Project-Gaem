@@ -10,6 +10,7 @@ public class MC_Script : MonoBehaviour
     public Rigidbody2D mcrb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public Logicmain logic;
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
@@ -19,7 +20,7 @@ public class MC_Script : MonoBehaviour
 
     void Start()
     {
-
+        logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
     }
 
     private void FixedUpdate()

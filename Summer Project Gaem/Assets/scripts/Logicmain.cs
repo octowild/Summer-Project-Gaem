@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Logicmain : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public MC_Script mc;
+    public vinedoorlogic vinedoor;
+    public keyleaflogic keyleaf;
     void Start()
+    {
+        mc = GameObject.FindGameObjectWithTag("Player").GetComponent<MC_Script>();
+
+    }
+
+    private void FixedUpdate()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         

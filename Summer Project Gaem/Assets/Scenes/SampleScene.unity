@@ -167,7 +167,7 @@ Transform:
   - {fileID: 688149261}
   - {fileID: 1131682771}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1410,7 +1410,7 @@ GameObject:
   - component: {fileID: 1049157403}
   m_Layer: 0
   m_Name: MC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,6 +1609,67 @@ MonoBehaviour:
     m_Bits: 64
   gravityScale: 5
   fallGravityScale: 15
+--- !u!1001 &1061897072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.326331
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.50158364
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01920395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790841434110341464, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307389832245357118, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: m_Name
+      value: vinedoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
 --- !u!1 &1072740836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1699,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92b155ea381cf64c9786e032ac85f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mc: {fileID: 0}
+  vinedoor: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+  keyleaf: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
 --- !u!4 &1072740838
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,7 +1715,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131682770
 GameObject:
@@ -2171,6 +2235,10 @@ PrefabInstance:
     - target: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432565874302608218, guid: 0b3a7a3f7766dd1489b5616e0bc1e1ea, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

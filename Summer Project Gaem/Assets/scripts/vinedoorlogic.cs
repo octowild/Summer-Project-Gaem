@@ -7,7 +7,6 @@ public class vinedoorlogic : MonoBehaviour
     public Logicmain logic;
     public CapsuleCollider2D capcol;
     public CircleCollider2D circol;
-    public BoxCollider2D trig;
     public bool ininteractzone;
     void Start()
     {
@@ -21,6 +20,10 @@ public class vinedoorlogic : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        ininteractzone = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        ininteractzone = false;
     }
 }

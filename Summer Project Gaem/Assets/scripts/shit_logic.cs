@@ -8,12 +8,14 @@ public class shitlogic : MonoBehaviour
     public Animator anim;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public Logicmain logic;
     private float speed;
 
 
     void Start()
     {
         speed = fallspeed;
+        logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
     }
 
 

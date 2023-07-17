@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7910190819181245746}
   m_Layer: 0
   m_Name: vinedoor
-  m_TagString: Untagged
+  m_TagString: interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9af64f7d8becfa49bc74c39ccaa0e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 0}
   capcol: {fileID: 5109921972149759449}
   circol: {fileID: 1571642662537896865}
-  trig: {fileID: 2121447625917610939}
   ininteractzone: 0
