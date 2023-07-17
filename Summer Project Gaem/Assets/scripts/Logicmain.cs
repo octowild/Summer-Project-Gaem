@@ -22,6 +22,7 @@ public class Logicmain : MonoBehaviour
     void Start()
     {
         mc = GameObject.FindGameObjectWithTag("Player").GetComponent<MC_Script>();
+        vinedoor = GameObject.FindGameObjectWithTag("interact").GetComponent<vinedoorlogic>();
 
     }
 

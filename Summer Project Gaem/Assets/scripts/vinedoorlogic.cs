@@ -23,6 +23,8 @@ public class vinedoorlogic : MonoBehaviour
         if(logic.dooropen)
         {
             anim.SetBool("isopen", true);
+            capcol.enabled = false;
+            circol.enabled = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)

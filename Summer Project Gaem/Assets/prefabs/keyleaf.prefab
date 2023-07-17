@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3234729208379427735}
   m_Layer: 0
   m_Name: keyleaf
-  m_TagString: interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,4 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logic: {fileID: 0}
+  mc: {fileID: 0}
   ininteractzone: 0
