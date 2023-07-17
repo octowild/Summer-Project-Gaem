@@ -39,11 +39,9 @@ public class Logicmain : MonoBehaviour
         if (mc.doorinteract && mc.haskey == 0)
         {
             nokey = true;
-            Debug.Log("mc has no key");
         }
         if (mc.doorinteract && mc.haskey > 0)
         {
-            Debug.Log("door open");
             dooropen = true;
             mc.haskey -= 1;
         }
