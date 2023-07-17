@@ -65,7 +65,7 @@ public class MC_Script : MonoBehaviour
         {
             haskey += 1;
             mcinteract = true;
-            Debug.Log(haskey);
+            
         }
     }
 
