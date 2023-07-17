@@ -5,14 +5,21 @@ using UnityEngine;
 public class Brib : MonoBehaviour
 {
     public Animator anim;
+    public GameObject shit;
+    public GameObject mc;
+
     void Start()
     {
-        
+        mc = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        if (transform.position.x == mc.transform.position.x)
+        {
+            Instantiate(shit, transform.position, transform.rotation);
+        }
         
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - logic
   - interact
   - projectile
+  - shit
   layers:
   - Default
   - TransparentFX

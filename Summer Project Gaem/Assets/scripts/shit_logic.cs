@@ -34,6 +34,7 @@ public class shitlogic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("shit");
         s_hit = true;
     }
     private bool IsGrounded()
