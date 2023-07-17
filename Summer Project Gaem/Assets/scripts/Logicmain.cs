@@ -15,6 +15,8 @@ public class Logicmain : MonoBehaviour
     public bool caninteract=false;
     public bool keyinteract=false;
     public bool vdoorinteract = false;
+    public bool nokey = false;
+    public bool dooropen;
 
 
     void Start()
@@ -26,6 +28,14 @@ public class Logicmain : MonoBehaviour
     private void FixedUpdate()
     {
         vdoorinteract = vinedoor.ininteractzone;
+        if (mc.doorinteract && mc.haskey == 0)
+        {
+            nokey = true;
+        }
+        if(mc.doorinteract&& mc.haskey > 0)
+        {
+            dooropen = true;
+        }
 
 
     }
