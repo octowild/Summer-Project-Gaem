@@ -8,6 +8,7 @@ TagManager:
   - hitbox
   - logic
   - interact
+  - projectile
   layers:
   - Default
   - TransparentFX

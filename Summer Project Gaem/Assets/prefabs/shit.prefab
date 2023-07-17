@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6347793876609114875}
   m_Layer: 0
   m_Name: shit
-  m_TagString: Untagged
+  m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,3 +193,4 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  logic: {fileID: 0}

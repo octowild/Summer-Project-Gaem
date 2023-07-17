@@ -1506,6 +1506,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   logic: {fileID: 0}
+  mcinteracts: 0
 --- !u!50 &1049157400
 Rigidbody2D:
   serializedVersion: 4
@@ -1683,6 +1684,10 @@ MonoBehaviour:
   vinedoor: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
   keyleaf: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
   shit: {fileID: 6347793876609114875, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
+  interactorder: 
+  caninteract: 0
+  keyinteract: 0
+  vdoorinteract: 0
 --- !u!4 &1072740838
 Transform:
   m_ObjectHideFlags: 0
