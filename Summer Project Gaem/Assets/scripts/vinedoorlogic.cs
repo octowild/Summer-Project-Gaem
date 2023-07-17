@@ -8,6 +8,10 @@ public class vinedoorlogic : MonoBehaviour
     public CapsuleCollider2D capcol;
     public CircleCollider2D circol;
     public bool ininteractzone;
+    public string uitxt = "this is a door";
+
+  
+
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
@@ -26,4 +30,6 @@ public class vinedoorlogic : MonoBehaviour
     {
         ininteractzone = false;
     }
+
+
 }

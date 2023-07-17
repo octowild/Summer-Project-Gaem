@@ -3,16 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ArrayTypes : MonoBehaviour
-{
-    public ItemStruct[] structItems;
-}
-[System.Serializable]
-public struct ItemStruct
-{
-    public int value;
-    public string itemName;
-}
 public class Logicmain : MonoBehaviour
 {
     public MC_Script mc;
