@@ -25,7 +25,6 @@ public class Logicmain : MonoBehaviour
 
     private void FixedUpdate()
     {
-        keyinteract = keyleaf.ininteractzone;
         vdoorinteract = vinedoor.ininteractzone;
 
 

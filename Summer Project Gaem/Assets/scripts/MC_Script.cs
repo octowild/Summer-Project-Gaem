@@ -18,6 +18,7 @@ public class MC_Script : MonoBehaviour
     private float jumptimer;
     public int haskey;
     public bool mcinteract;
+    public bool doorinteract;
 
 
 
@@ -66,6 +67,10 @@ public class MC_Script : MonoBehaviour
             haskey += 1;
             mcinteract = true;
             
+        }
+        if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract)
+        {
+            doorinteract = true;
         }
     }
 
