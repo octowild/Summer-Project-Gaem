@@ -27,23 +27,25 @@ public class Logicmain : MonoBehaviour
 
     private void FixedUpdate()
     {
-        vdoorinteract = vinedoor.ininteractzone;
-        if (mc.doorinteract && mc.haskey == 0)
-        {
-            nokey = true;
-        }
-        if(mc.doorinteract&& mc.haskey > 0)
-        {
-            dooropen = true;
-            mc.haskey -= 1;
-        }
-
+  
 
     }
 
 
     void Update()
     {
-        
+        vdoorinteract = vinedoor.ininteractzone;
+        if (mc.doorinteract && mc.haskey == 0)
+        {
+            nokey = true;
+            Debug.Log("mc has no key");
+        }
+        if (mc.doorinteract && mc.haskey > 0)
+        {
+            Debug.Log("door open");
+            dooropen = true;
+            mc.haskey -= 1;
+        }
+
     }
 }
