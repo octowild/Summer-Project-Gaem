@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1792085902662693784}
   - component: {fileID: 2811854161309810494}
   - component: {fileID: 925033387257977828}
-  - component: {fileID: 6330333662091286587}
   - component: {fileID: 6972720863291029222}
+  - component: {fileID: 3234729208379427735}
   m_Layer: 0
   m_Name: keyleaf
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2811854161309810494
 SpriteRenderer:
@@ -108,41 +108,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &6330333662091286587
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4103537684462731467}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.03}
-  m_Size: {x: 0.52, y: 0.88}
-  m_Direction: 0
 --- !u!61 &6972720863291029222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,3 +153,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.49, y: 2.57}
   m_EdgeRadius: 0
+--- !u!114 &3234729208379427735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103537684462731467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b3e7426a42fd43bc662cadc56a643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
