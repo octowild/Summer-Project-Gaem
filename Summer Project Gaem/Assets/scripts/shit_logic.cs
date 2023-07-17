@@ -10,6 +10,7 @@ public class shitlogic : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public Logicmain logic;
     private float speed;
+    public bool s_hit;
 
 
     void Start()
@@ -30,6 +31,10 @@ public class shitlogic : MonoBehaviour
 
         }
         transform.position += Vector3.down * speed * Time.deltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        s_hit = true;
     }
     private bool IsGrounded()
     {
