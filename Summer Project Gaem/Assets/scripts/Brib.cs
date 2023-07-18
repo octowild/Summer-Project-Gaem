@@ -7,6 +7,8 @@ public class Brib : MonoBehaviour
     public Animator anim;
     public GameObject shit;
     public GameObject mc;
+    public float offset;
+    private bool overlap;
 
     void Start()
     {
@@ -16,8 +18,19 @@ public class Brib : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x == mc.transform.position.x)
+        float birbpos = transform.position.x;
+        float mcpos = mc.transform.position.x;
+        if (offset == Mathf.Abs(birbpos - mcpos))
         {
+            overlap = true;
+        }
+        else
+        {
+            overlap = false;
+        }
+        if (overlap)
+        {
+            Debug.Log("overlap");
             Instantiate(shit, transform.position, transform.rotation);
         }
         
