@@ -58,7 +58,7 @@ public class Brib : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector3(birbtrigrange.x * 2, birbtrigrange.y * 2, 1));
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, flyheight,1));
     }
