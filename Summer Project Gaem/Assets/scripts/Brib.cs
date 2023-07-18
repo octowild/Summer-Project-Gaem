@@ -9,7 +9,11 @@ public class Brib : MonoBehaviour
     public GameObject mc;
     public float offset;
     public float timebwshits;
+    public Vector2 birbtrigrange;
+    public float speed;
+    public float flyheight;
     private float timer;
+    private Vector3 move;
 
     void Start()
     {
@@ -26,7 +30,18 @@ public class Brib : MonoBehaviour
             timer = 0;
         }
         
-        
+
+        if (birbtrigrange.x >= Mathf.Abs(transform.position.x - mc.transform.position.x)&& birbtrigrange.y >= Mathf.Abs(transform.position.y - mc.transform.position.y))
+        {
+            move = new Vector3(5, 5, 0);
+            
+        }
+        transform.position += move;
+
+        if (flyheight <= transform.position.y)
+        {
+            move = new Vector3(speed, 0, 0);
+        }
             
         
         
