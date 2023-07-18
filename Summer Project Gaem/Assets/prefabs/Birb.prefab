@@ -160,3 +160,6 @@ MonoBehaviour:
   mc: {fileID: 0}
   offset: 0.36
   timebwshits: 1
+  birbtrigrange: {x: 5.95, y: 2.99}
+  speed: 0.5
+  flyheight: 0
