@@ -1877,7 +1877,7 @@ MonoBehaviour:
   haskey: 0
   mcinteract: 0
   doorinteract: 0
-  s_hit: 0
+  hit: 0
   dmgtaken: 0
 --- !u!50 &1049157400
 Rigidbody2D:
@@ -2463,8 +2463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.64221, y: 105.449524}
-  m_SizeDelta: {x: 288.3056, y: 95.7009}
+  m_AnchoredPosition: {x: -157.69403, y: 115.4599}
+  m_SizeDelta: {x: 185.0364, y: 75.6802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528811238
 MonoBehaviour:
@@ -2488,8 +2488,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a6361444ee10ddd499e256ed60e07229, type: 2}
+  m_sharedMaterial: {fileID: 7602056849393174809, guid: a6361444ee10ddd499e256ed60e07229, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2513,8 +2513,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
