@@ -19,6 +19,9 @@ public class MC_Script : MonoBehaviour
     public int haskey;
     public bool mcinteract;
     public bool doorinteract;
+    public bool hit;
+    public int dmgtaken;
+    
 
 
 
@@ -30,7 +33,9 @@ public class MC_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-       
+
+        hp -= dmgtaken;
+        dmgtaken = 0;
        
 
     }

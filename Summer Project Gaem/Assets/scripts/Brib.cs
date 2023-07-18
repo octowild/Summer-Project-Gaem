@@ -24,7 +24,6 @@ public class Brib : MonoBehaviour
         {
             Instantiate(shit, transform.position, transform.rotation);
             timer = 0;
-
         }
         
         

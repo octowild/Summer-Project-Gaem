@@ -187,11 +187,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c487b1033ab764b998a57253e0aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 2
   fallspeed: 2.5
   anim: {fileID: 2581881738800486504}
   groundCheck: {fileID: 7535050985362709941}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  mc: {fileID: 0}
   logic: {fileID: 0}
   s_hit: 0

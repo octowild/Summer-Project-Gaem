@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class shitlogic : MonoBehaviour
 {
+    public int dmg;
     public float fallspeed;
     public Animator anim;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public MC_Script mc;
     public Logicmain logic;
     private float speed;
     public bool s_hit;
-
+    private float shitgone = 2f;
+    private float timer;
 
     void Start()
     {
         speed = fallspeed;
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
+        mc = GameObject.FindGameObjectWithTag("Player").GetComponent<MC_Script>();
     }
 
 
@@ -27,15 +31,25 @@ public class shitlogic : MonoBehaviour
         {
             speed = 0;
             anim.SetBool("splash",true);
-            
+            timer += Time.deltaTime;
 
+        }
+        if (mc.hit)
+        {
+            mc.hit = false;
+            Destroy(gameObject);
+        }
+        if (timer >= shitgone)
+        {
+            Destroy(gameObject);
         }
         transform.position += Vector3.down * speed * Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("shit");
-        s_hit = true;
+        mc.dmgtaken = dmg;
+        mc.hit = true;
     }
     private bool IsGrounded()
     {
