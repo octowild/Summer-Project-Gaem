@@ -25,7 +25,11 @@ public class Brib : MonoBehaviour
 
     void Update()
     {
-        xdiff = transform.position.x - mc.transform.position.x;
+        if (!flyhor)
+        {
+            xdiff = transform.position.x - mc.transform.position.x;
+        }
+        
         timer += Time.deltaTime;
         if (offset >= Mathf.Abs(transform.position.x - mc.transform.position.x)&&timer>=timebwshits)
         {
