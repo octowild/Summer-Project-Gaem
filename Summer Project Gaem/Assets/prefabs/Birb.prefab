@@ -158,4 +158,5 @@ MonoBehaviour:
   anim: {fileID: 2674150369002543150}
   shit: {fileID: 2517032069580579509, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
   mc: {fileID: 0}
-  offset: 3.43
+  offset: 0.36
+  timebwshits: 1
