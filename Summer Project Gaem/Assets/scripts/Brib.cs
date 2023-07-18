@@ -40,7 +40,7 @@ public class Brib : MonoBehaviour
 
         if (birbtrigrange.x >= Mathf.Abs(transform.position.x - mc.transform.position.x)&& birbtrigrange.y >= Mathf.Abs(transform.position.y - mc.transform.position.y)&&!flyhor)
         {
-            move = new Vector3(-1*Mathf.Sign(xdiff),1, 0);
+            move = new Vector3(-0.005f*Mathf.Sign(xdiff),0.005f, 0);
             
         }
         transform.position += move;
@@ -60,5 +60,6 @@ public class Brib : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(transform.position, new Vector3(birbtrigrange.x * 2, birbtrigrange.y * 2, 1));
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, flyheight,1));
     }
 }
