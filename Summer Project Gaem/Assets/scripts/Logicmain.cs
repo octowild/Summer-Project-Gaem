@@ -9,6 +9,7 @@ public class Logicmain : MonoBehaviour
     public vinedoorlogic vinedoor;
     public keyleaflogic keyleaf;
     public shitlogic shit;
+    public TextMesh txt;
 
     public List<bool> interactorder;
 
