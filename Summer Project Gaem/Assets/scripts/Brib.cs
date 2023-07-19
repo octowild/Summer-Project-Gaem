@@ -23,6 +23,7 @@ public class Brib : MonoBehaviour
     }
 
 
+
     void Update()
     {
         if (!flyhor)

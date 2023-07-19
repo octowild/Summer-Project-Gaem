@@ -14,7 +14,8 @@ public class camfollowmc : MonoBehaviour
 
     void Start()
     {
- //       threshold = calthreshold();
+        player = GameObject.FindGameObjectWithTag("Player");
+        //       threshold = calthreshold();
     }
   
     void FixedUpdate()
