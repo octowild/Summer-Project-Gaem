@@ -1837,6 +1837,8 @@ MonoBehaviour:
   vinedoor: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
   keyleaf: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
   shit: {fileID: 6347793876609114875, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
+  txt: {fileID: 0}
+  hrt: {fileID: 1236838899}
   interactorder: 
   caninteract: 0
   keyinteract: 0
@@ -2397,8 +2399,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 34.1
+  m_fontSizeBase: 34.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2701,7 +2703,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0

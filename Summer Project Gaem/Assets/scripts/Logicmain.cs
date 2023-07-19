@@ -10,6 +10,7 @@ public class Logicmain : MonoBehaviour
     public keyleaflogic keyleaf;
     public shitlogic shit;
     public TextMesh txt;
+    public RawImage hrt;
 
     public List<bool> interactorder;
 
