@@ -46,6 +46,7 @@ public class Brib : MonoBehaviour
         {
             move = new Vector3(-0.1f*Mathf.Sign(xdiff),0.1f, 0);
             trig = true;
+            anim.SetBool("is_flying", true);
         }
         transform.position += move;
 
