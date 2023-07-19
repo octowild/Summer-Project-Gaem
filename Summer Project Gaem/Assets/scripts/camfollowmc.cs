@@ -52,18 +52,11 @@ public class camfollowmc : MonoBehaviour
  //       t.x -= offset.x;
  //       t.y -= offset.y;
  //       return t;
-    }
-        
-
-       
-
-
-    
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Vector2 border = calthreshold();
-        Gizmos.DrawWireCube(transform.position, new Vector3(border.x*2,border.y*2,1));
-    }
+  //  }
+ //   private void OnDrawGizmos()
+ //   {
+ //       Gizmos.color = Color.yellow;
+ //       Vector2 border = calthreshold();
+  //      Gizmos.DrawWireCube(transform.position, new Vector3(border.x*2,border.y*2,1));
+ //   }
 }
