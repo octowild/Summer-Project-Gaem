@@ -101,10 +101,10 @@ public class MC_Script : MonoBehaviour
             mcinteract = false;
         }
 
-        if(sideinput>0&& !faceingright)
+        if(sideinput>0 && !faceingright)
         {
             flip();
-        }else if (sideinput < 0&& faceingright)
+        }else if (sideinput < 0 && faceingright)
         {
             flip();
         }

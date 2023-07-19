@@ -18,6 +18,7 @@ public class Brib : MonoBehaviour
     private float xdiff;
     private bool flyhor;
     private bool trig;
+    private bool faceleft;
 
     void Start()
     {
@@ -58,15 +59,27 @@ public class Brib : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        
-        
-    }
-    
-    void flip(float dir)
-    {
 
+        if(xdiff>0 && faceleft)
+        {
+            flip();
+        }else if (xdiff < 0 && !faceleft)
+        {
+            flip();
+        }
+        
+        
+        
     }
+
+    void flip()
+    {
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+        faceleft = !faceleft;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
