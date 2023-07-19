@@ -12,6 +12,7 @@ public class Brib : MonoBehaviour
     public Vector2 birbtrigrange;
     public float speed;
     public float flyheight;
+    public float despawndis=100;
     private float timer;
     private Vector3 move;
     private float xdiff;
@@ -24,7 +25,7 @@ public class Brib : MonoBehaviour
 
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (!flyhor)
         {
@@ -41,7 +42,7 @@ public class Brib : MonoBehaviour
 
         if (birbtrigrange.x >= Mathf.Abs(transform.position.x - mc.transform.position.x)&& birbtrigrange.y >= Mathf.Abs(transform.position.y - mc.transform.position.y)&&!flyhor)
         {
-            move = new Vector3(-0.005f*Mathf.Sign(xdiff),0.005f, 0);
+            move = new Vector3(-0.1f*Mathf.Sign(xdiff),0.1f, 0);
             
         }
         transform.position += move;
@@ -52,7 +53,10 @@ public class Brib : MonoBehaviour
             move = new Vector3(-speed*Mathf.Sign(xdiff), 0, 0);
         }
             
-        
+        if (Mathf.Abs(transform.position.x - mc.transform.position.x)>=despawndis)
+        {
+            Destroy(gameObject);
+        }
         
         
         
