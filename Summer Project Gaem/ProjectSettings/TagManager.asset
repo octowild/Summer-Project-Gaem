@@ -10,6 +10,7 @@ TagManager:
   - interact
   - projectile
   - shit
+  - playerspawn
   layers:
   - Default
   - TransparentFX

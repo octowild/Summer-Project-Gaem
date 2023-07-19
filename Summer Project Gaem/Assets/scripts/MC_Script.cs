@@ -13,6 +13,7 @@ public class MC_Script : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public keyleaflogic key;
     public Logicmain logic;
+    public GameObject spawn;
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
@@ -31,6 +32,7 @@ public class MC_Script : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
+        spawn = GameObject.FindGameObjectWithTag("playerspawn");
         c_hp = maxhp;
     }
 
@@ -43,7 +45,12 @@ public class MC_Script : MonoBehaviour
         {
             isded = true;
         }
-
+        //if(respawn)
+        //{ 
+        //    c_hp = maxhp;
+        //    isded = false;
+        //    transform.position = spawn.transform.position;
+        //}
     }
     void Update()
     {
