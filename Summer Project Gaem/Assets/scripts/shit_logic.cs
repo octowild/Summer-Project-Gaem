@@ -47,7 +47,6 @@ public class shitlogic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("shit");
         mc.dmgtaken = dmg;
         mc.hit = true;
     }

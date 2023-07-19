@@ -12,7 +12,7 @@ public class Logicmain : MonoBehaviour
     public TextMesh txt;
     public RawImage hrt;
 
-    public List<bool> interactorder;
+    public int vinedmg = 1;
 
     public bool caninteract=false;
     public bool keyinteract=false;

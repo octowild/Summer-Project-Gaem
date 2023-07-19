@@ -25,7 +25,9 @@ public class MC_Script : MonoBehaviour
     public int dmgtaken;
     public bool isded;
     public int c_hp;
-    
+    public float vinedmgtick;
+    private float timer = 0;
+
 
 
 
@@ -39,6 +41,8 @@ public class MC_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
+        
 
         c_hp -= dmgtaken;
         dmgtaken = 0;
@@ -109,6 +113,17 @@ public class MC_Script : MonoBehaviour
             flip();
         }
 
+    }
+    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        timer += Time.deltaTime;
+        if (collision.collider.tag == "hitbox"&&timer>=vinedmgtick)
+        {
+            Debug.Log("vine");
+            dmgtaken = logic.vinedmg;
+            timer =0;
+        }
     }
 
 
