@@ -17,6 +17,7 @@ public class MC_Script : MonoBehaviour
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
+    private bool faceingright=true;
     public int haskey;
     public bool mcinteract;
     public bool doorinteract;
@@ -99,9 +100,25 @@ public class MC_Script : MonoBehaviour
             doorinteract = false;
             mcinteract = false;
         }
+
+        if(sideinput>0&& !faceingright)
+        {
+            flip();
+        }else if (sideinput < 0&& faceingright)
+        {
+            flip();
+        }
+
     }
 
 
+    void flip()
+    {
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+        faceingright = !faceingright;
+    }
 
     private bool IsGrounded()
     {

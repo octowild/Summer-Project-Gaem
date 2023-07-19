@@ -62,6 +62,11 @@ public class Brib : MonoBehaviour
         
         
     }
+    
+    void flip(float dir)
+    {
+
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
