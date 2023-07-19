@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MC_Script : MonoBehaviour
 {
-    public int hp;
+    public int maxhp;
     public float movespeed;
     public float jumpstr;
     public float jumptime;
@@ -21,6 +21,8 @@ public class MC_Script : MonoBehaviour
     public bool doorinteract;
     public bool hit;
     public int dmgtaken;
+    public bool isded;
+    public int c_hp;
     
 
 
@@ -29,26 +31,30 @@ public class MC_Script : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Logicmain>();
+        c_hp = maxhp;
     }
 
     private void FixedUpdate()
     {
 
-        hp -= dmgtaken;
+        c_hp -= dmgtaken;
         dmgtaken = 0;
-       
+        if (c_hp <= 0)
+        {
+            isded = true;
+        }
 
     }
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()&&!isded)
         {
             isjumping = true;
             jumptimer = jumptime;
             mcrb.velocity = Vector2.up * jumpstr;
         }
-        if (Input.GetKey(KeyCode.Space) && isjumping)
+        if (Input.GetKey(KeyCode.Space) && isjumping&&!isded)
         {
             if (jumptimer > 0)
             {
@@ -64,22 +70,27 @@ public class MC_Script : MonoBehaviour
         {
             isjumping = false;
         }
-        sideinput = Input.GetAxisRaw("Horizontal");
+        if (!isded)
+        {
+            sideinput = Input.GetAxisRaw("Horizontal");
+        } else { sideinput = 0; }
+        
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.E)&&key.ininteractzone)
+        if (Input.GetKeyDown(KeyCode.E)&&key.ininteractzone&&!isded)
         {
             haskey += 1;
             mcinteract = true;
             
         }
-        if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract)
+        if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
             doorinteract = false;
+            mcinteract = false;
         }
     }
 

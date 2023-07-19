@@ -162,5 +162,5 @@ MonoBehaviour:
   timebwshits: 1
   birbtrigrange: {x: 4.67, y: 2.99}
   speed: 0.075
-  flyheight: 3.71
+  flyheight: 3.5
   despawndis: 100

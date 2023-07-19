@@ -17,6 +17,7 @@ public class Brib : MonoBehaviour
     private Vector3 move;
     private float xdiff;
     private bool flyhor;
+    private bool trig;
 
     void Start()
     {
@@ -43,11 +44,11 @@ public class Brib : MonoBehaviour
         if (birbtrigrange.x >= Mathf.Abs(transform.position.x - mc.transform.position.x)&& birbtrigrange.y >= Mathf.Abs(transform.position.y - mc.transform.position.y)&&!flyhor)
         {
             move = new Vector3(-0.1f*Mathf.Sign(xdiff),0.1f, 0);
-            
+            trig = true;
         }
         transform.position += move;
 
-        if (flyheight <= transform.position.y)
+        if (flyheight <= transform.position.y&&trig)
         {
             flyhor = true;
             move = new Vector3(-speed*Mathf.Sign(xdiff), 0, 0);
@@ -64,7 +65,8 @@ public class Brib : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector3(birbtrigrange.x * 2, birbtrigrange.y * 2, 1));
+        Gizmos.DrawWireCube(transform.position, new Vector3(birbtrigrange.x * 2, birbtrigrange.y * 2, 1));        
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, flyheight,1));
+        //Gizmos.DrawWireCube(transform.position, new Vector3(despawndis * 2, 0, 1));
     }
 }
