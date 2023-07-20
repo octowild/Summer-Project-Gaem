@@ -44,7 +44,7 @@ public class MC_Script : MonoBehaviour
     {
 
         if (dmgtaken > 0) {
-            flashred();
+            StartCoroutine(flashred());
         }
 
         c_hp -= dmgtaken;
@@ -132,7 +132,7 @@ public class MC_Script : MonoBehaviour
     public IEnumerator flashred()
     {
         mcsprite.color = Color.red;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         mcsprite.color = Color.white;
     }
 
