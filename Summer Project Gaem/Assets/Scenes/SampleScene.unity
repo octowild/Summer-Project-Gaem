@@ -1940,6 +1940,10 @@ PrefabInstance:
       propertyPath: maxhp
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+      propertyPath: vinedmgtick
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6432565874302608218, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: m_Name
       value: MC
@@ -2096,7 +2100,7 @@ MonoBehaviour:
   shit: {fileID: 6347793876609114875, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
   txt: {fileID: 0}
   hrt: {fileID: 1236838899}
-  interactorder: 
+  vinedmg: 1
   caninteract: 0
   keyinteract: 0
   vdoorinteract: 0
