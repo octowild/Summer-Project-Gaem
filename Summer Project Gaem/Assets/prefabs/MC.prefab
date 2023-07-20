@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f258b64bf339949a872d383e0ae57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  maxhp: 0
   movespeed: 7
   jumpstr: 10
   jumptime: 0.3
@@ -175,11 +175,16 @@ MonoBehaviour:
     m_Bits: 64
   key: {fileID: 0}
   logic: {fileID: 0}
+  spawn: {fileID: 0}
+  mcsprite: {fileID: 2445643131529414836}
   haskey: 0
   mcinteract: 0
   doorinteract: 0
   hit: 0
   dmgtaken: 0
+  isded: 0
+  c_hp: 0
+  vinedmgtick: 0
 --- !u!50 &8802710754204487285
 Rigidbody2D:
   serializedVersion: 4

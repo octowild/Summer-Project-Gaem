@@ -14,6 +14,7 @@ public class MC_Script : MonoBehaviour
     public keyleaflogic key;
     public Logicmain logic;
     public GameObject spawn;
+    public SpriteRenderer mcsprite;
     private float sideinput;
     private bool isjumping;
     private float jumptimer;
@@ -41,8 +42,10 @@ public class MC_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        
+
+        if (dmgtaken > 0) {
+            flashred();
+        }
 
         c_hp -= dmgtaken;
         dmgtaken = 0;
@@ -124,6 +127,13 @@ public class MC_Script : MonoBehaviour
             dmgtaken = logic.vinedmg;
             timer =0;
         }
+    }
+
+    public IEnumerator flashred()
+    {
+        mcsprite.color = Color.red;
+        yield return new WaitForSeconds(1);
+        mcsprite.color = Color.white;
     }
 
 
