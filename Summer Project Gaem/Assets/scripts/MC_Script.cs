@@ -131,7 +131,7 @@ public class MC_Script : MonoBehaviour
 
     public IEnumerator flashred()
     {
-        mcsprite.color = Color.red;
+        mcsprite.color = new Color32(255,100,96,255);
         yield return new WaitForSeconds(0.1f);
         mcsprite.color = Color.white;
     }
