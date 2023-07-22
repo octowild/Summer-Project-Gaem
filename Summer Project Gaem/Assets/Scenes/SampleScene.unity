@@ -538,6 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 408217518}
   logic: {fileID: 1072740837}
+  spawn: {fileID: 824258076}
   speedfactor: 5
 --- !u!1 &688149260
 GameObject:
