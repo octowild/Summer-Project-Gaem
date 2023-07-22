@@ -27,7 +27,8 @@ public class peashooter : MonoBehaviour
         timer += Time.deltaTime;
         if (trigrange.x>=Mathf.Abs(xdiff)&& trigrange.y >= Mathf.Abs(ydiff) && timer >= shootspeed)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            GameObject shotbullet=Instantiate(bullet, transform.position, transform.rotation);
+            shotbullet.GetComponent<bulletscript>().dir = Mathf.Sign(xdiff);
             timer = 0;
         }
 
@@ -46,5 +47,10 @@ public class peashooter : MonoBehaviour
         scaler.x *= -1;
         transform.localScale = scaler;
         faceleft = !faceleft;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, new Vector3(trigrange.x * 2, trigrange.y * 2, 1));
     }
 }
