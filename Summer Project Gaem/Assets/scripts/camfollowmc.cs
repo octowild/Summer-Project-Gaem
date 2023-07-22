@@ -50,7 +50,7 @@ public class camfollowmc : MonoBehaviour
 
         if (logic.inputrespawn)
         {
-            transform.position = spawn.transform.position;
+            transform.position = new Vector3(spawn.transform.position.x,spawn.transform.position.y,transform.position.z);
         }
     }
  //   private Vector3 calthreshold()
