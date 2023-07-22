@@ -157,5 +157,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mc: {fileID: 0}
   bullet: {fileID: 5767579747986816776, guid: 0c24d9fabe3fc8d4cb85a8b9f03c462a, type: 3}
-  shootspeed: 3
+  shootspeed: 2
   trigrange: {x: 6.7, y: 3.57}
