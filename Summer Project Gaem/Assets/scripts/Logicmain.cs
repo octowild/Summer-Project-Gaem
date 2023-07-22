@@ -19,6 +19,7 @@ public class Logicmain : MonoBehaviour
     public bool vdoorinteract = false;
     public bool nokey = false;
     public bool dooropen;
+    public bool inputrespawn;
 
 
     void Start()

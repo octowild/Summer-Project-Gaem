@@ -5,8 +5,10 @@ using UnityEngine;
 public class camfollowmc : MonoBehaviour
 {
     public GameObject player;
- //   public MC_Script mcs;
- //   public Rigidbody2D mcrb;
+    public Logicmain logic;
+    public GameObject spawn;
+    //   public MC_Script mcs;
+    //   public Rigidbody2D mcrb;
     public float speedfactor;
  //   public Vector2 offset;
   //  public float camspeed;
@@ -45,6 +47,11 @@ public class camfollowmc : MonoBehaviour
         Vector3 newpos=player.transform.position+new Vector3(0,0,transform.position.z);
         Vector3 smoothpos = Vector3.Lerp(transform.position,newpos,speedfactor*Time.deltaTime);
         transform.position = smoothpos;
+
+        if (logic.inputrespawn)
+        {
+            transform.position=
+        }
     }
  //   private Vector3 calthreshold()
   //  {

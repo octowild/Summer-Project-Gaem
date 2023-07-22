@@ -53,12 +53,12 @@ public class MC_Script : MonoBehaviour
         {
             isded = true;
         }
-        //if(respawn)
-        //{ 
-        //    c_hp = maxhp;
-        //    isded = false;
-        //    transform.position = spawn.transform.position;
-        //}
+        if(logic.inputrespawn)
+        { 
+            c_hp = maxhp;
+            isded = false;
+            transform.position = spawn.transform.position;
+        }
     }
     void Update()
     {
