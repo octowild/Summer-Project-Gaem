@@ -11,6 +11,7 @@ public class peashooter : MonoBehaviour
     public Vector2 trigrange;
     private float xdiff;
     private float ydiff;
+    private bool faceleft;
 
     void Start()
     {
@@ -29,5 +30,21 @@ public class peashooter : MonoBehaviour
             Instantiate(bullet, transform.position, transform.rotation);
             timer = 0;
         }
+
+        if (xdiff > 0 && !faceleft)
+        {
+            flip();
+        }
+        else if (xdiff < 0 && faceleft)
+        {
+            flip();
+        }
+    }
+    void flip()
+    {
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+        faceleft = !faceleft;
     }
 }
