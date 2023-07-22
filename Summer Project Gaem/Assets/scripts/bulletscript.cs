@@ -22,7 +22,7 @@ public class bulletscript : MonoBehaviour
             mc.hit = false;
             Destroy(gameObject);
         }
-        transform.position += Vector3.up * speed *dir* Time.deltaTime;
+        transform.position += Vector3.right * speed *dir* Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
