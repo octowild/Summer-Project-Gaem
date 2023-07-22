@@ -8,6 +8,9 @@ public class peashooter : MonoBehaviour
     public GameObject bullet;
     public float shootspeed;
     private float timer;
+    public Vector2 trigrange;
+    private float xdiff;
+    private float ydiff;
 
     void Start()
     {
@@ -17,8 +20,11 @@ public class peashooter : MonoBehaviour
 
     void FixedUpdate()
     {
+        xdiff = mc.transform.position.x - transform.position.x;
+        ydiff = mc.transform.position.y - transform.position.y;
+        
         timer += Time.deltaTime;
-        if (timer >= shootspeed)
+        if (trigrange.x>=Mathf.Abs(xdiff)&& trigrange.y >= Mathf.Abs(ydiff) && timer >= shootspeed)
         {
             Instantiate(bullet, transform.position, transform.rotation);
             timer = 0;
