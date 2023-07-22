@@ -196,4 +196,5 @@ MonoBehaviour:
     m_Bits: 64
   mc: {fileID: 0}
   logic: {fileID: 0}
+  shittime: 20
   s_hit: 0

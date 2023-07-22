@@ -11,10 +11,12 @@ public class shitlogic : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public MC_Script mc;
     public Logicmain logic;
+    public float shittime;
     private float speed;
     public bool s_hit;
     private float shitgone = 2f;
     private float timer;
+    private float _t;
 
     void Start()
     {
@@ -40,6 +42,11 @@ public class shitlogic : MonoBehaviour
             Destroy(gameObject);
         }
         if (timer >= shitgone)
+        {
+            Destroy(gameObject);
+        }
+        _t += Time.deltaTime;
+        if (timer >= shittime)
         {
             Destroy(gameObject);
         }

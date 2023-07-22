@@ -8,9 +8,13 @@ public class bulletscript : MonoBehaviour
     public float speed;
     public MC_Script mc;
     public float dir;
+    private float timer;
+    public float bullettime;
+    private float _s;
 
     void Start()
     {
+        _s = speed;
         mc = GameObject.FindGameObjectWithTag("Player").GetComponent<MC_Script>();
     }
 
@@ -22,7 +26,12 @@ public class bulletscript : MonoBehaviour
             mc.hit = false;
             Destroy(gameObject);
         }
-        transform.position += Vector3.right * speed *dir* Time.deltaTime;
+        transform.position += Vector3.right * _s *dir* Time.deltaTime;
+        timer += Time.deltaTime;
+        if (timer >= bullettime)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
