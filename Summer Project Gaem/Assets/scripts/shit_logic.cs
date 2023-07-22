@@ -39,7 +39,7 @@ public class shitlogic : MonoBehaviour
         if (mc.hit)
         {
             mc.hit = false;
-            Destroy(gameObject);
+            
         }
         if (timer >= shitgone)
         {
@@ -56,6 +56,7 @@ public class shitlogic : MonoBehaviour
     {
         mc.dmgtaken = dmg;
         mc.hit = true;
+        Destroy(gameObject);
     }
     private bool IsGrounded()
     {

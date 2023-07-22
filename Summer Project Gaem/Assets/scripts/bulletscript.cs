@@ -24,7 +24,7 @@ public class bulletscript : MonoBehaviour
         if (mc.hit)
         {
             mc.hit = false;
-            Destroy(gameObject);
+            
         }
         transform.position += Vector3.right * _s *dir* Time.deltaTime;
         timer += Time.deltaTime;
@@ -37,5 +37,6 @@ public class bulletscript : MonoBehaviour
     {
         mc.dmgtaken = dmg;
         mc.hit = true;
+        Destroy(gameObject);
     }
 }
