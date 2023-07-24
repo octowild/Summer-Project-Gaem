@@ -90,6 +90,11 @@ public class MC_Script : MonoBehaviour
         {
             sideinput = Input.GetAxisRaw("Horizontal");
         } else { sideinput = 0; }
+        if (sideinput != 0)
+        {
+            anim.SetBool("_move", true);
+        }
+        else { anim.SetBool("_move", true); }
         
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
