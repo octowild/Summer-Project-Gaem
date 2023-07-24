@@ -13,7 +13,9 @@ public class Brib : MonoBehaviour
     public float speed;
     public float flyheight;
     public float despawndis=100;
+    public float animtimer;
     private float timer;
+    private float _timeranim;
     private Vector3 move;
     private float xdiff;
     private bool flyhor;
@@ -40,12 +42,14 @@ public class Brib : MonoBehaviour
             Instantiate(shit, transform.position, transform.rotation);
             timer = 0;
         }
-        
 
+        _timeranim += Time.deltaTime;
         if (birbtrigrange.x >= Mathf.Abs(transform.position.x - mc.transform.position.x)&& birbtrigrange.y >= Mathf.Abs(transform.position.y - mc.transform.position.y)&&!flyhor)
         {
-            move = new Vector3(-0.1f*Mathf.Sign(xdiff),0.1f, 0);
-            trig = true;
+            if ( _timeranim >= animtimer) {
+                move = new Vector3(-0.1f * Mathf.Sign(xdiff), 0.1f, 0);
+                trig = true;
+            }
             anim.SetBool("is_flying", true);
         }
         transform.position += move;
