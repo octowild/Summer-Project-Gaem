@@ -94,7 +94,7 @@ public class MC_Script : MonoBehaviour
         {
             anim.SetBool("_move", true);
         }
-        else { anim.SetBool("_move", true); }
+        if(sideinput==0) { anim.SetBool("_move", true); }
         
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
