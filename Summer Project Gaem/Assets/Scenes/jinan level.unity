@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92b155ea381cf64c9786e032ac85f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mc: {fileID: 0}
+  mc: {fileID: 1828797247}
   vinedoor: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
   keyleaf: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
   shit: {fileID: 6347793876609114875, guid: 47cff29fe11354c42bc705c835c1a59b, type: 3}
@@ -1554,6 +1554,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+--- !u!114 &1828797247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+  m_PrefabInstance: {fileID: 1828797246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f258b64bf339949a872d383e0ae57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1953459709
 GameObject:
   m_ObjectHideFlags: 0
