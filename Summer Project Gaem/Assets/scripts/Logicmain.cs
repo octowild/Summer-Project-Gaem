@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Logicmain : MonoBehaviour
+public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
     public MC_Script mc;
     public vinedoorlogic vinedoor;
@@ -49,5 +50,15 @@ public class Logicmain : MonoBehaviour
             mc.haskey -= 1;
         }
 
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 }
