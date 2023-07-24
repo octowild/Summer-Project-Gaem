@@ -11,6 +11,7 @@ public class MC_Script : MonoBehaviour
     public Rigidbody2D mcrb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public Animator anim;
     public keyleaflogic key;
     public Logicmain logic;
     public GameObject spawn;

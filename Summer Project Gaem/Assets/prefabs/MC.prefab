@@ -121,6 +121,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  anim: {fileID: 612543606587505513}
   key: {fileID: 0}
   logic: {fileID: 0}
   spawn: {fileID: 0}
