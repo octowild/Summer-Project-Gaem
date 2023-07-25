@@ -102,16 +102,17 @@ public class MC_Script : MonoBehaviour
         {
             doorinteract = true;
         }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            doorinteract = false;
-            mcinteract = false;
-        }
+        
         if (Input.GetKeyDown(KeyCode.E) && key.ininteractzone && !isded)
         {
             haskey += 1;
             mcinteract = true;
 
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            doorinteract = false;
+            mcinteract = false;
         }
 
         if (sideinput>0 && !faceingright)
