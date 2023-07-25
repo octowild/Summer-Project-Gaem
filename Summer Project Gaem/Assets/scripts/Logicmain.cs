@@ -39,7 +39,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     void Update()
     {
-        vdoorinteract = vinedoor.ininteractzone;
+        
         if (mc.doorinteract && mc.haskey == 0)
         {
             nokey = true;
@@ -49,6 +49,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             dooropen = true;
             mc.haskey -= 1;
         }
+        vdoorinteract = vinedoor.ininteractzone;
 
     }
 
