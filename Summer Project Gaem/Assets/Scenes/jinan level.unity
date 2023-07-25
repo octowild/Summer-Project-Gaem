@@ -2082,7 +2082,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2117,16 +2117,16 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 507439789, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 958076474, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1197243963, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 9720978, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1051021320, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 958076474, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: 1735547381, guid: 93c49a5af8586c0488e463beea99536b, type: 3}
   m_TileMatrixArray:
@@ -19542,6 +19542,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1244210164 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
+  m_PrefabInstance: {fileID: 1330229272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b3e7426a42fd43bc662cadc56a643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1330229272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19594,6 +19605,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
+      propertyPath: mc
+      value: 
+      objectReference: {fileID: 1828797247}
+    - target: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
+      propertyPath: logic
+      value: 
+      objectReference: {fileID: 823920242}
     - target: {fileID: 4103537684462731467, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
       propertyPath: m_Name
       value: keyleaf
@@ -19659,6 +19678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vinedoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7910190819181245746, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
+      propertyPath: logic
+      value: 
+      objectReference: {fileID: 823920242}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19733,9 +19756,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 1244210164}
+    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+      propertyPath: logic
+      value: 
+      objectReference: {fileID: 823920242}
+    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: maxhp
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+      propertyPath: spawn
+      value: 
+      objectReference: {fileID: 1110626868}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: vinedmgtick
       value: 1.5
