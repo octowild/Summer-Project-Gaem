@@ -97,12 +97,7 @@ public class MC_Script : MonoBehaviour
         
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.E)&&key.ininteractzone&&!isded)
-        {
-            haskey += 1;
-            mcinteract = true;
-            
-        }
+        
         if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;
@@ -112,8 +107,14 @@ public class MC_Script : MonoBehaviour
             doorinteract = false;
             mcinteract = false;
         }
+        if (Input.GetKeyDown(KeyCode.E) && key.ininteractzone && !isded)
+        {
+            haskey += 1;
+            mcinteract = true;
 
-        if(sideinput>0 && !faceingright)
+        }
+
+        if (sideinput>0 && !faceingright)
         {
             flip();
         }else if (sideinput < 0 && faceingright)
