@@ -19664,20 +19664,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0458e526baa104eabef76f99410d0d, type: 3}
-<<<<<<< HEAD
-=======
---- !u!114 &1794940544 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3234729208379427735, guid: da9b3baaa459e234c9955d5c03c3ffdb, type: 3}
-  m_PrefabInstance: {fileID: 1330229272}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e41b3e7426a42fd43bc662cadc56a643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> parent of a26ab0c (ccs)
 --- !u!1001 &1828797246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19747,13 +19733,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
-<<<<<<< HEAD
-=======
-      propertyPath: key
-      value: 
-      objectReference: {fileID: 1794940544}
-    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
->>>>>>> parent of a26ab0c (ccs)
       propertyPath: maxhp
       value: 8
       objectReference: {fileID: 0}
