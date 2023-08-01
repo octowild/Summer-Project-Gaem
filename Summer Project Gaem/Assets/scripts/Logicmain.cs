@@ -24,6 +24,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     public Image[] hrts;
     public Animator hrtanim;
+    public Animator keyiconanim;
 
     void Start()
     {
@@ -52,6 +53,10 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     void Update()
     {
+        if (mc.haskey>0)
+        {
+            keyiconanim.SetBool("keyininv", true);
+        }
         
         if (mc.doorinteract && mc.haskey == 0)
         {

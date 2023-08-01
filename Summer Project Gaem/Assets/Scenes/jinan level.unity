@@ -888,7 +888,7 @@ MonoBehaviour:
   speeddec: 5
   jumpdec: 2.5
   dmg: 1
-  inttimer: 3
+  inttimer: 1.5
   ticktimer: 1
   mc: {fileID: 0}
   boged: 0
@@ -1649,6 +1649,7 @@ MonoBehaviour:
   - {fileID: 1355019987}
   - {fileID: 871077399}
   hrtanim: {fileID: 0}
+  keyiconanim: {fileID: 809711501}
 --- !u!4 &823920243
 Transform:
   m_ObjectHideFlags: 0
