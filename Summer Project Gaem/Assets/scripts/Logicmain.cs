@@ -23,8 +23,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public bool inputrespawn;
 
     public Image[] hrts;
-    public Sprite fhrt;
-    public Sprite ehrt;
+    public Animator hrtanim;
 
     void Start()
     {
@@ -35,8 +34,19 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     private void FixedUpdate()
     {
-  
 
+        for (int i = 0; i < hrts.Length; i++)
+        {
+            hrtanim = hrts[i].GetComponent<Animator>();
+            if (i >= mc.c_hp)
+            {
+                hrtanim.SetBool("dmged", true);
+            }
+            else
+            {
+                hrtanim.SetBool("dmged", false);
+            }
+        }
     }
 
 

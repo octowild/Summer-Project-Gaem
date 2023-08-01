@@ -1648,8 +1648,7 @@ MonoBehaviour:
   - {fileID: 801200001}
   - {fileID: 1355019987}
   - {fileID: 871077399}
-  fhrt: {fileID: 0}
-  ehrt: {fileID: 0}
+  hrtanim: {fileID: 0}
 --- !u!4 &823920243
 Transform:
   m_ObjectHideFlags: 0
@@ -20403,7 +20402,7 @@ PrefabInstance:
       objectReference: {fileID: 823920242}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: maxhp
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: spawn

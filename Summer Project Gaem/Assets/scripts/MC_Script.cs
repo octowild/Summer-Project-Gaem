@@ -130,7 +130,6 @@ public class MC_Script : MonoBehaviour
         timer += Time.deltaTime;
         if (collision.collider.tag == "hitbox"&&timer>=vinedmgtick)
         {
-            Debug.Log("vine");
             dmgtaken = logic.vinedmg;
             timer =0;
         }
