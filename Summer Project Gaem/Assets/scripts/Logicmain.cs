@@ -22,6 +22,9 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public bool dooropen;
     public bool inputrespawn;
 
+    public Image[] hrts;
+    public Animator hrtanim;
+    public Animator keyiconanim;
 
     void Start()
     {
@@ -32,14 +35,29 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     private void FixedUpdate()
     {
-  
 
+        for (int i = 0; i < hrts.Length; i++)
+        {
+            hrtanim = hrts[i].GetComponent<Animator>();
+            if (i >= mc.c_hp)
+            {
+                hrtanim.SetBool("dmged", true);
+            }
+            else
+            {
+                hrtanim.SetBool("dmged", false);
+            }
+        }
     }
 
 
     void Update()
     {
-        vdoorinteract = vinedoor.ininteractzone;
+        if (mc.haskey>0)
+        {
+            keyiconanim.SetBool("keyininv", true);
+        }
+        
         if (mc.doorinteract && mc.haskey == 0)
         {
             nokey = true;
@@ -49,6 +67,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             dooropen = true;
             mc.haskey -= 1;
         }
+        vdoorinteract = vinedoor.ininteractzone;
 
     }
 

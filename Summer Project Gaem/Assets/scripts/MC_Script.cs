@@ -97,15 +97,17 @@ public class MC_Script : MonoBehaviour
         
         mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.E)&&key.ininteractzone&&!isded)
-        {
-            haskey += 1;
-            mcinteract = true;
-            
-        }
+        
         if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.E) && key.ininteractzone && !isded)
+        {
+            haskey += 1;
+            mcinteract = true;
+
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
@@ -113,7 +115,7 @@ public class MC_Script : MonoBehaviour
             mcinteract = false;
         }
 
-        if(sideinput>0 && !faceingright)
+        if (sideinput>0 && !faceingright)
         {
             flip();
         }else if (sideinput < 0 && faceingright)
@@ -128,7 +130,6 @@ public class MC_Script : MonoBehaviour
         timer += Time.deltaTime;
         if (collision.collider.tag == "hitbox"&&timer>=vinedmgtick)
         {
-            Debug.Log("vine");
             dmgtaken = logic.vinedmg;
             timer =0;
         }

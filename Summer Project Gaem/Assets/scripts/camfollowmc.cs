@@ -20,7 +20,7 @@ public class camfollowmc : MonoBehaviour
         //       threshold = calthreshold();
     }
   
-    void FixedUpdate()
+    void LateUpdate()
     {
      //   camspeed = mcs.movespeed > speedfactor ? mcs.movespeed : speedfactor;
      //   if (Mathf.Abs(player.transform.position.x - transform.position.x) >= offset.x || Mathf.Abs(player.transform.position.y - transform.position.y) >= offset.y)
