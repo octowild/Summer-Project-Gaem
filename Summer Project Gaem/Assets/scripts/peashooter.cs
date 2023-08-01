@@ -9,9 +9,11 @@ public class peashooter : MonoBehaviour
     public float shootspeed;
     private float timer;
     public Vector2 trigrange;
+    public float _animtime;
     private float xdiff;
     private float ydiff;
     private bool faceleft;
+    private float _animt ;
 
     void Start()
     {
@@ -27,9 +29,17 @@ public class peashooter : MonoBehaviour
         timer += Time.deltaTime;
         if (trigrange.x>=Mathf.Abs(xdiff)&& trigrange.y >= Mathf.Abs(ydiff) && timer >= shootspeed)
         {
-            GameObject shotbullet=Instantiate(bullet, transform.position, transform.rotation);
-            shotbullet.GetComponent<bulletscript>().dir = Mathf.Sign(xdiff);
-            timer = 0;
+
+            _animt += Time.deltaTime;
+            if (_animt>=_animtime)
+            {
+
+
+                GameObject shotbullet = Instantiate(bullet, transform.position, transform.rotation);
+                shotbullet.GetComponent<bulletscript>().dir = Mathf.Sign(xdiff);
+                timer = 0;
+                _animt = 0;
+            }
         }
 
         if (xdiff > 0 && !faceleft)
