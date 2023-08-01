@@ -22,6 +22,9 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public bool dooropen;
     public bool inputrespawn;
 
+    public Image[] hrts;
+    public Sprite fhrt;
+    public Sprite ehrt;
 
     void Start()
     {

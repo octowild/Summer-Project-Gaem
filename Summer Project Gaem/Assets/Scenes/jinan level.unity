@@ -1644,6 +1644,12 @@ MonoBehaviour:
   nokey: 1
   dooropen: 0
   inputrespawn: 0
+  hrts:
+  - {fileID: 801200001}
+  - {fileID: 1355019987}
+  - {fileID: 871077399}
+  fhrt: {fileID: 0}
+  ehrt: {fileID: 0}
 --- !u!4 &823920243
 Transform:
   m_ObjectHideFlags: 0
