@@ -9,6 +9,7 @@ public class peashooter : MonoBehaviour
     public float shootspeed;
     private float timer;
     public Vector2 trigrange;
+    public Animator anim;
     public float _animtime;
     private float xdiff;
     private float ydiff;
@@ -31,6 +32,7 @@ public class peashooter : MonoBehaviour
         {
 
             _animt += Time.deltaTime;
+            anim.SetBool("atk", true);
             if (_animt>=_animtime)
             {
 
