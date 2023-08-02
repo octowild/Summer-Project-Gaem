@@ -46,6 +46,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2099479255
+    locked: 0
   - name: foliage
     uniqueID: 273001833
     locked: 0
@@ -54,7 +57,4 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1397743527
-    locked: 0
-  - name: Background
-    uniqueID: 2099479255
     locked: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.EventSystems;
 
 public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
@@ -25,6 +26,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Image[] hrts;
     public Animator hrtanim;
     public Animator keyiconanim;
+    public TMP_Text keyno;
 
     void Start()
     {
@@ -57,6 +59,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         {
             keyiconanim.SetBool("keyininv", true);
         }
+        keyno.text=mc.haskey.ToString();
         
         if (mc.doorinteract && mc.haskey == 0)
         {

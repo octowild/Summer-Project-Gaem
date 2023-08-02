@@ -6,6 +6,7 @@ public class peashooter : MonoBehaviour
 {
     public GameObject mc;
     public GameObject bullet;
+    public bulletscript bs;
     public float shootspeed;
     private float timer;
     public Vector2 trigrange;
@@ -15,6 +16,8 @@ public class peashooter : MonoBehaviour
     private float ydiff;
     private bool faceleft;
     private float _animt ;
+    private Vector3 _bspawn;
+    private float _boffset=-0.855f;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class peashooter : MonoBehaviour
     {
         xdiff = mc.transform.position.x - transform.position.x;
         ydiff = mc.transform.position.y - transform.position.y;
-        
+        anim.SetBool("atk", false);
         timer += Time.deltaTime;
         if (trigrange.x>=Mathf.Abs(xdiff)&& trigrange.y >= Mathf.Abs(ydiff) && timer >= shootspeed)
         {
@@ -35,22 +38,29 @@ public class peashooter : MonoBehaviour
             anim.SetBool("atk", true);
             if (_animt>=_animtime)
             {
+                _bspawn = transform.position + new Vector3(_boffset, 0, 0);
 
-
-                GameObject shotbullet = Instantiate(bullet, transform.position, transform.rotation);
+                GameObject shotbullet = Instantiate(bullet, _bspawn, transform.rotation);
                 shotbullet.GetComponent<bulletscript>().dir = Mathf.Sign(xdiff);
                 timer = 0;
                 _animt = 0;
+
             }
         }
 
         if (xdiff > 0 && !faceleft)
         {
             flip();
+            _boffset *= -1;
+            bs._runflip = true;
+
         }
         else if (xdiff < 0 && faceleft)
         {
             flip();
+            _boffset *= -1;
+            bs._runflip = false;
+
         }
     }
     void flip()
