@@ -59,7 +59,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         {
             keyiconanim.SetBool("keyininv", true);
         }
-        keyno.text=mc.haskey.ToString();
+        keyno.text="x"+mc.haskey.ToString();
         
         if (mc.doorinteract && mc.haskey == 0)
         {
