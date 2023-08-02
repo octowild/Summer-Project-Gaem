@@ -8,9 +8,11 @@ public class bulletscript : MonoBehaviour
     public float speed;
     public MC_Script mc;
     public float dir;
+    public float sd;
     private float timer;
     public float bullettime;
     private float _s;
+    private float _sdt;
 
     void Start()
     {
@@ -29,6 +31,11 @@ public class bulletscript : MonoBehaviour
         transform.position += Vector3.right * _s *dir* Time.deltaTime;
         timer += Time.deltaTime;
         if (timer >= bullettime)
+        {
+            Destroy(gameObject);
+        }
+        _sdt += Time.deltaTime;
+        if (_sdt >= sd)
         {
             Destroy(gameObject);
         }
