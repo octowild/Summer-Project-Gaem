@@ -2004,6 +2004,7 @@ MonoBehaviour:
   - {fileID: 871077399}
   hrtanim: {fileID: 0}
   keyiconanim: {fileID: 809711501}
+  keyno: {fileID: 954395230}
 --- !u!4 &823920243
 Transform:
   m_ObjectHideFlags: 0
