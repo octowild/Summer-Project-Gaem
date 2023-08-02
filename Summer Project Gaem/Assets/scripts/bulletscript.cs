@@ -11,6 +11,8 @@ public class bulletscript : MonoBehaviour
     public float sd;
     private float timer;
     public float bullettime;
+    public bool faceleft;
+    public bool _runflip=false;
     private float _s;
     private float _sdt;
 
@@ -39,6 +41,19 @@ public class bulletscript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (_runflip)
+        {
+            Debug.Log("flip");
+            flip();
+            _runflip = false;
+        }
+    }
+     void flip()
+    {
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+        faceleft = !faceleft;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

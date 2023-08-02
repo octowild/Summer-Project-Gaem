@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3028957014631451981}
   - component: {fileID: 5135046963847892151}
   - component: {fileID: 5194848290160464055}
+  - component: {fileID: 4022949496667256392}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -104,6 +105,8 @@ MonoBehaviour:
   dir: 1
   sd: 5
   bullettime: 20
+  faceleft: 0
+  _runflip: 0
 --- !u!70 &5194848290160464055
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,5 +140,26 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01, y: 0}
-  m_Size: {x: 0.37, y: 0.15}
+  m_Size: {x: 0.34, y: 0.12}
   m_Direction: 1
+--- !u!95 &4022949496667256392
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767579747986816776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e1c559fc22b47845baa9680c4532442, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

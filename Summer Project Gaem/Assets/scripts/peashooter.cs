@@ -6,6 +6,7 @@ public class peashooter : MonoBehaviour
 {
     public GameObject mc;
     public GameObject bullet;
+    public bulletscript bs;
     public float shootspeed;
     private float timer;
     public Vector2 trigrange;
@@ -51,11 +52,15 @@ public class peashooter : MonoBehaviour
         {
             flip();
             _boffset *= -1;
+            bs._runflip = true;
+
         }
         else if (xdiff < 0 && faceleft)
         {
             flip();
             _boffset *= -1;
+            bs._runflip = false;
+
         }
     }
     void flip()
