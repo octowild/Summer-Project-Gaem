@@ -26,6 +26,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Image[] hrts;
     public Animator hrtanim;
     public Animator keyiconanim;
+    public TMP_Text keyno;
 
     void Start()
     {
