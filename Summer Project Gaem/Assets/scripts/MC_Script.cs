@@ -8,6 +8,7 @@ public class MC_Script : MonoBehaviour
     public float movespeed;
     public float jumpstr;
     public float jumptime;
+    public float airspeed;
     public Rigidbody2D mcrb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -29,6 +30,7 @@ public class MC_Script : MonoBehaviour
     public int c_hp;
     public float vinedmgtick;
     private float timer = 0;
+    private bool grounded;
 
 
 
@@ -63,8 +65,9 @@ public class MC_Script : MonoBehaviour
     }
     void Update()
     {
+        grounded = IsGrounded();
         
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()&&!isded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded)
         {
             isjumping = true;
             jumptimer = jumptime;
@@ -86,18 +89,21 @@ public class MC_Script : MonoBehaviour
         {
             isjumping = false;
         }
-        if (!isded)
+        if (!isded&&grounded)
         {
             sideinput = Input.GetAxisRaw("Horizontal");
-        } else { sideinput = 0; }
+        }else if (!isded&&!grounded) { }
+        else { sideinput = 0; }
+
         if (sideinput != 0)
         {
             anim.SetBool("_move", true);
         }else { anim.SetBool("_move", false); }
         
-        mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+        if(grounded) mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+        else mcrb.velocity = new Vector2(sideinput * airspeed, mcrb.velocity.y);
 
-        
+
         if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;

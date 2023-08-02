@@ -21153,6 +21153,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1110626868}
     - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
+      propertyPath: airspeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984124680380190996, guid: 7e0955f261e41a74c9b48bfa1e559728, type: 3}
       propertyPath: vinedmgtick
       value: 1.5
       objectReference: {fileID: 0}
