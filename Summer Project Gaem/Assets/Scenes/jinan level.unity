@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 931049713}
   paraeff: 0.5
-  paraeffy: 0
+  paraeffy: 0.95
 --- !u!1 &751639441
 GameObject:
   m_ObjectHideFlags: 0
@@ -20968,7 +20968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 931049713}
   paraeff: 0.3
-  paraeffy: 0
+  paraeffy: 0.93
 --- !u!1001 &1584429471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21285,7 +21285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 931049713}
   paraeff: 0.7
-  paraeffy: 0
+  paraeffy: 0.97
 --- !u!1 &1953459709
 GameObject:
   m_ObjectHideFlags: 0
