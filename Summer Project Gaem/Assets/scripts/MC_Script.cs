@@ -31,6 +31,8 @@ public class MC_Script : MonoBehaviour
     public float vinedmgtick;
     private float timer = 0;
     private bool grounded;
+    private float airdirstorage;
+    private bool decreaseairs;
 
 
 
@@ -89,19 +91,30 @@ public class MC_Script : MonoBehaviour
         {
             isjumping = false;
         }
-        if (!isded&&grounded)
+        
+        if (!isded)
         {
             sideinput = Input.GetAxisRaw("Horizontal");
-        }else if (!isded&&!grounded) { }
+        }
         else { sideinput = 0; }
 
         if (sideinput != 0)
         {
             anim.SetBool("_move", true);
         }else { anim.SetBool("_move", false); }
-        
-        if(grounded) mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
-        else mcrb.velocity = new Vector2(sideinput * airspeed, mcrb.velocity.y);
+
+        if (grounded) {
+            airdirstorage = sideinput;
+        }
+
+        if (sideinput!= airdirstorage) { decreaseairs = true; }
+        if (decreaseairs) { mcrb.velocity = new Vector2(sideinput * airspeed, mcrb.velocity.y); }
+
+        else {
+            mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+
+        }
+        if (grounded) { decreaseairs = false; }
 
 
         if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
