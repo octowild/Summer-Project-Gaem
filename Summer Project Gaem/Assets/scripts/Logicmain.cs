@@ -99,7 +99,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     public void skipintrocutscene()
     {
-        introrender.gameObject.SetActive(false);
+        introcutscene.time += 30;
         skipintro.gameObject.SetActive(false);
     }
 
