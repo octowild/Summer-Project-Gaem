@@ -27,6 +27,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Animator hrtanim;
     public Animator keyiconanim;
     public TMP_Text keyno;
+    public GameObject respawnbutton;
 
     void Start()
     {
@@ -49,6 +50,12 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             {
                 hrtanim.SetBool("dmged", false);
             }
+        }
+        if (mc.isded) respawnbutton.SetActive(true);
+        if (inputrespawn)
+        {
+            respawnbutton.SetActive(false);
+            inputrespawn = false;
         }
     }
 

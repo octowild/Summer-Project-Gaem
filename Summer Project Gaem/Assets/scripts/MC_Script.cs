@@ -59,12 +59,7 @@ public class MC_Script : MonoBehaviour
         {
             isded = true;
         }
-        if(logic.inputrespawn)
-        { 
-            c_hp = maxhp;
-            isded = false;
-            transform.position = spawn.transform.position;
-        }
+
     }
     void Update()
     {
@@ -181,6 +176,13 @@ public class MC_Script : MonoBehaviour
         anim.SetBool("_isjumping", true);
         yield return new WaitForSeconds(0.2f);
         anim.SetBool("_isjumping", false);
+    }
+    public void Respawn()
+    {
+        isded = false;
+        c_hp = maxhp;
+        transform.position = spawn.transform.position;
+        logic.inputrespawn = true;
     }
 
 
