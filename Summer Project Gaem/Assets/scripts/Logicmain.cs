@@ -80,7 +80,10 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         }
         vdoorinteract = vinedoor.ininteractzone;
 
-
+        if (!(introcutscene.isPlaying))
+        {
+            introcutscene.gameObject.SetActive(false);
+        }
 
     }
 
