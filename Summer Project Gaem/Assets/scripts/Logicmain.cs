@@ -30,14 +30,17 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public TMP_Text keyno;
     public GameObject respawnbutton;
     public VideoPlayer introcutscene;
-    public GameObject introrender;
-    private bool isplaystarted;
+    public GameObject introrender; 
     public GameObject skipintro;
+    public AudioSource bgm;
+
+    private bool isplaystarted;
 
     void Start()
     {
         mc = GameObject.FindGameObjectWithTag("Player").GetComponent<MC_Script>();
         vinedoor = GameObject.FindGameObjectWithTag("interact").GetComponent<vinedoorlogic>();
+        
 
     }
 
@@ -93,6 +96,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         {
             introrender.gameObject.SetActive(false);
             skipintro.gameObject.SetActive(false);
+            bgm.gameObject.SetActive(true);
         }
 
     }
@@ -100,8 +104,8 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public void skipintrocutscene()
     {
         Destroy(introrender);
-
         skipintro.gameObject.SetActive(false);
+        bgm.gameObject.SetActive(true);
     }
 
     public void OnPointerDown(PointerEventData eventData)
