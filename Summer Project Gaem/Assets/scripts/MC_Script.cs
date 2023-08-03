@@ -71,9 +71,11 @@ public class MC_Script : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded)
         {
+            anim.SetBool("_isjumping", true);
             isjumping = true;
             jumptimer = jumptime;
             mcrb.velocity = Vector2.up * jumpstr;
+
         }
         if (Input.GetKey(KeyCode.Space) && isjumping&&!isded)
         {
@@ -90,8 +92,14 @@ public class MC_Script : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isjumping = false;
+
         }
-        
+        if (grounded)
+        {
+            anim.SetBool("_landing", true);
+
+        }else anim.SetBool("_landing", false);
+
         if (!isded)
         {
             sideinput = Input.GetAxisRaw("Horizontal");
