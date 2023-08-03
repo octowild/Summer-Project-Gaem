@@ -32,6 +32,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public VideoPlayer introcutscene;
     public GameObject introrender;
     private bool isplaystarted;
+    public GameObject skipintro;
 
     void Start()
     {
@@ -61,15 +62,6 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             respawnbutton.SetActive(false);
             inputrespawn = false;
         }
-        if (!isplaystarted&&introcutscene.isPlaying)
-        {
-            isplaystarted = true;
-            
-        }
-        if (isplaystarted && !introcutscene.isPlaying)
-        {
-            introrender.gameObject.SetActive(false);
-        }
     }
 
 
@@ -92,8 +84,23 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         }
         vdoorinteract = vinedoor.ininteractzone;
 
+        if (!isplaystarted && introcutscene.isPlaying)
+        {
+            isplaystarted = true;
 
+        }
+        if (isplaystarted && !introcutscene.isPlaying)
+        {
+            introrender.gameObject.SetActive(false);
+            skipintro.gameObject.SetActive(false);
+        }
 
+    }
+
+    public void skipintrocutscene()
+    {
+        introrender.gameObject.SetActive(false);
+        skipintro.gameObject.SetActive(false);
     }
 
     public void OnPointerDown(PointerEventData eventData)
