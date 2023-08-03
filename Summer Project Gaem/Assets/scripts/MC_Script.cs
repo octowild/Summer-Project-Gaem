@@ -31,6 +31,8 @@ public class MC_Script : MonoBehaviour
     public float vinedmgtick;
     private float timer = 0;
     private bool grounded;
+    private float airdirstorage;
+    private bool decreaseairs;
 
 
 
@@ -66,50 +68,71 @@ public class MC_Script : MonoBehaviour
     void Update()
     {
         grounded = IsGrounded();
+
         
-        if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded)
+        if (Input.GetButtonDown("Jump") && grounded&&!isded) //jump
         {
+            StartCoroutine(jumpanim());
             isjumping = true;
             jumptimer = jumptime;
             mcrb.velocity = Vector2.up * jumpstr;
+
         }
-        if (Input.GetKey(KeyCode.Space) && isjumping&&!isded)
+        if (Input.GetButton("Jump") && isjumping&&!isded) //jumpmoar
         {
             if (jumptimer > 0)
             {
                 mcrb.velocity = Vector2.up * jumpstr;
                 jumptimer -= Time.deltaTime;
+
             }
             else
             {
                 isjumping = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetButtonUp("Jump")) //nojump
         {
             isjumping = false;
+
         }
-        if (!isded&&grounded)
+        if (grounded) //animstuff
+        {
+            anim.SetBool("_landing", true);
+
+        }else anim.SetBool("_landing", false);
+
+        if (!isded) //movement
         {
             sideinput = Input.GetAxisRaw("Horizontal");
-        }else if (!isded&&!grounded) { }
-        else { sideinput = 0; }
+        }
+        else { sideinput = 0; } 
 
-        if (sideinput != 0)
+        if (sideinput != 0) //animstuff
         {
             anim.SetBool("_move", true);
         }else { anim.SetBool("_move", false); }
-        
-        if(grounded) mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
-        else mcrb.velocity = new Vector2(sideinput * airspeed, mcrb.velocity.y);
+
+        if (grounded) {
+            airdirstorage = sideinput;
+        }
+
+        if (sideinput!= airdirstorage) { decreaseairs = true; }
+        if (decreaseairs) { mcrb.velocity = new Vector2(sideinput * airspeed, mcrb.velocity.y); }
+
+        else {
+            mcrb.velocity = new Vector2(sideinput * movespeed, mcrb.velocity.y);
+
+        }
+        if (grounded) { decreaseairs = false; }
 
 
-        if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
+        if (Input.GetButtonDown("Interact") && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.E) && key.ininteractzone && !isded)
+        if (Input.GetButtonDown("Interact") && key.ininteractzone && !isded)
         {
             haskey += 1;
             mcinteract = true;
@@ -146,6 +169,12 @@ public class MC_Script : MonoBehaviour
         mcsprite.color = new Color32(255,100,96,255);
         yield return new WaitForSeconds(0.1f);
         mcsprite.color = Color.white;
+    }
+    public IEnumerator jumpanim()
+    {
+        anim.SetBool("_isjumping", true);
+        yield return new WaitForSeconds(0.2f);
+        anim.SetBool("_isjumping", false);
     }
 
 
