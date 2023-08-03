@@ -33,7 +33,7 @@ public class MC_Script : MonoBehaviour
     private bool grounded;
     private float airdirstorage;
     private bool decreaseairs;
-    private float interactanimtimer=0.5f;
+    public float interactanimtimer;
     private float _inttimer;
 
 
