@@ -116,6 +116,7 @@ MonoBehaviour:
   movespeed: 7
   jumpstr: 10
   jumptime: 0.3
+  airspeed: 0
   mcrb: {fileID: 8802710754204487285}
   groundCheck: {fileID: 4587090865124598273}
   groundLayer:
