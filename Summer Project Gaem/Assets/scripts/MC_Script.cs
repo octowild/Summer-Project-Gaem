@@ -33,8 +33,7 @@ public class MC_Script : MonoBehaviour
     private bool grounded;
     private float airdirstorage;
     private bool decreaseairs;
-    public float interactanimtimer;
-    private float _inttimer;
+
 
 
 
@@ -131,24 +130,17 @@ public class MC_Script : MonoBehaviour
 
         if (Input.GetButtonDown("Interact") && logic.vdoorinteract&&!isded)
         {
-            anim.SetBool("_interact", true);
-            _inttimer += Time.deltaTime;
-            if (interactanimtimer <= _inttimer) { 
-                doorinteract = true;
-                _inttimer = 0;
-            }
+            anim.SetBool("_interact", true); 
+            doorinteract = true;
+
         }
         
         if (Input.GetButtonDown("Interact") && key.ininteractzone && !isded)
         {
             anim.SetBool("_interact", true);
-            _inttimer += Time.deltaTime;
-            if (interactanimtimer <= _inttimer)
-            {
-                haskey += 1;
-                mcinteract = true;
-                _inttimer = 0;
-            }
+            haskey += 1;
+            mcinteract = true;
+
 
         }
         if (Input.GetButtonUp("Interact"))
