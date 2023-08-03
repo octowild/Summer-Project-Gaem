@@ -68,45 +68,47 @@ public class MC_Script : MonoBehaviour
     void Update()
     {
         grounded = IsGrounded();
+
         
-        if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded) //jump
         {
-            anim.SetBool("_isjumping", true);
+            StartCoroutine(jumpanim());
             isjumping = true;
             jumptimer = jumptime;
             mcrb.velocity = Vector2.up * jumpstr;
 
         }
-        if (Input.GetKey(KeyCode.Space) && isjumping&&!isded)
+        if (Input.GetKey(KeyCode.Space) && isjumping&&!isded) //jumpmoar
         {
             if (jumptimer > 0)
             {
                 mcrb.velocity = Vector2.up * jumpstr;
                 jumptimer -= Time.deltaTime;
+
             }
             else
             {
                 isjumping = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space)) //nojump
         {
             isjumping = false;
 
         }
-        if (grounded)
+        if (grounded) //animstuff
         {
             anim.SetBool("_landing", true);
 
         }else anim.SetBool("_landing", false);
 
-        if (!isded)
+        if (!isded) //movement
         {
             sideinput = Input.GetAxisRaw("Horizontal");
         }
-        else { sideinput = 0; }
+        else { sideinput = 0; } 
 
-        if (sideinput != 0)
+        if (sideinput != 0) //animstuff
         {
             anim.SetBool("_move", true);
         }else { anim.SetBool("_move", false); }
@@ -167,6 +169,12 @@ public class MC_Script : MonoBehaviour
         mcsprite.color = new Color32(255,100,96,255);
         yield return new WaitForSeconds(0.1f);
         mcsprite.color = Color.white;
+    }
+    public IEnumerator jumpanim()
+    {
+        anim.SetBool("_isjumping", true);
+        yield return new WaitForSeconds(0.2f);
+        anim.SetBool("_isjumping", false);
     }
 
 
