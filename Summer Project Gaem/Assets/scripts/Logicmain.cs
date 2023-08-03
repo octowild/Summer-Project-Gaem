@@ -28,6 +28,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Animator keyiconanim;
     public TMP_Text keyno;
     public GameObject respawnbutton;
+    public GameObject introcutscene;
 
     void Start()
     {
@@ -78,6 +79,8 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             mc.haskey -= 1;
         }
         vdoorinteract = vinedoor.ininteractzone;
+
+
 
     }
 
