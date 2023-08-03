@@ -138,7 +138,7 @@ public class MC_Script : MonoBehaviour
             mcinteract = true;
 
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetButtonUp("Interact"))
         {
             doorinteract = false;
             mcinteract = false;
