@@ -70,7 +70,7 @@ public class MC_Script : MonoBehaviour
         grounded = IsGrounded();
 
         
-        if (Input.GetKeyDown(KeyCode.Space) && grounded&&!isded) //jump
+        if (Input.GetButtonDown("Jump") && grounded&&!isded) //jump
         {
             StartCoroutine(jumpanim());
             isjumping = true;
@@ -78,7 +78,7 @@ public class MC_Script : MonoBehaviour
             mcrb.velocity = Vector2.up * jumpstr;
 
         }
-        if (Input.GetKey(KeyCode.Space) && isjumping&&!isded) //jumpmoar
+        if (Input.GetButton("Jump") && isjumping&&!isded) //jumpmoar
         {
             if (jumptimer > 0)
             {
@@ -91,7 +91,7 @@ public class MC_Script : MonoBehaviour
                 isjumping = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space)) //nojump
+        if (Input.GetButtonUp("Jump")) //nojump
         {
             isjumping = false;
 
@@ -127,12 +127,12 @@ public class MC_Script : MonoBehaviour
         if (grounded) { decreaseairs = false; }
 
 
-        if (Input.GetKeyDown(KeyCode.E) && logic.vdoorinteract&&!isded)
+        if (Input.GetButtonDown("Interact") && logic.vdoorinteract&&!isded)
         {
             doorinteract = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.E) && key.ininteractzone && !isded)
+        if (Input.GetButtonDown("Interact") && key.ininteractzone && !isded)
         {
             haskey += 1;
             mcinteract = true;
