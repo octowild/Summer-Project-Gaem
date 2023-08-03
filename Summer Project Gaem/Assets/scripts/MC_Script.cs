@@ -129,17 +129,20 @@ public class MC_Script : MonoBehaviour
 
         if (Input.GetButtonDown("Interact") && logic.vdoorinteract&&!isded)
         {
+            anim.SetBool("_interact", true);
             doorinteract = true;
         }
         
         if (Input.GetButtonDown("Interact") && key.ininteractzone && !isded)
         {
+            anim.SetBool("_interact", true);
             haskey += 1;
             mcinteract = true;
 
         }
         if (Input.GetButtonUp("Interact"))
         {
+            anim.SetBool("_interact", false);
             doorinteract = false;
             mcinteract = false;
         }
