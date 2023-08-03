@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Video;
 
 public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
@@ -28,7 +29,9 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Animator keyiconanim;
     public TMP_Text keyno;
     public GameObject respawnbutton;
-    public GameObject introcutscene;
+    public VideoPlayer introcutscene;
+    public GameObject introrender;
+    private bool isplaystarted;
 
     void Start()
     {
@@ -58,6 +61,15 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             respawnbutton.SetActive(false);
             inputrespawn = false;
         }
+        if (!isplaystarted&&introcutscene.isPlaying)
+        {
+            isplaystarted = true;
+            
+        }
+        if (isplaystarted && !introcutscene.isPlaying)
+        {
+            introrender.gameObject.SetActive(false);
+        }
     }
 
 
@@ -80,10 +92,7 @@ public class Logicmain : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         }
         vdoorinteract = vinedoor.ininteractzone;
 
-        if (!(introcutscene.isPlaying))
-        {
-            introcutscene.gameObject.SetActive(false);
-        }
+
 
     }
 
